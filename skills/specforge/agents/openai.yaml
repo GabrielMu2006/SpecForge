@@ -1,0 +1,4 @@
+interface:
+  display_name: "SpecForge"
+  short_description: "Turn rough ideas into build-ready product specs"
+  default_prompt: "Use $specforge to clarify my idea and create an actionable SPEC.md."
