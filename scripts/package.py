@@ -5,20 +5,22 @@ import hashlib
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
-from check import ROOT, SKILL, require, validate
+import check
+
+from check import require
 
 
 def build(output_dir=None):
-    metadata = validate()
+    metadata = check.validate()
     version = metadata["metadata"]["version"]
-    output_dir = Path(output_dir) if output_dir else ROOT / "dist"
+    output_dir = (Path(output_dir) if output_dir else check.ROOT / "dist").resolve()
+    require(output_dir != check.SKILL.resolve() and check.SKILL.resolve() not in output_dir.parents,
+            "Build output must be outside the runtime skill directory")
     output_dir.mkdir(parents=True, exist_ok=True)
     destination = output_dir / f"specforge-{version}.zip"
     entries = {}
-    for path in sorted(SKILL.rglob("*")):
-        if path.is_file():
-            name = f"specforge/{path.relative_to(SKILL).as_posix()}"
-            entries[name] = path.read_bytes()
+    for name in sorted(check.RUNTIME_FILES):
+        entries[f"specforge/{name}"] = (check.SKILL / name).read_bytes()
     with ZipFile(destination, "w", compression=ZIP_DEFLATED) as archive:
         for name, content in entries.items():
             info = ZipInfo(name, date_time=(2026, 1, 1, 0, 0, 0))

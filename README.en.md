@@ -23,6 +23,8 @@ The default deliverable is one `SPEC.md`. Large backlogs may move to a linked `T
 
 The workflow adapts to websites, apps, scripts, automations, plugins, and skills. Small tools do not acquire unnecessary pages, accounts, or release plans.
 
+The first handoff anchors the core promise in concrete success/failure examples and names any validation work that blocks dependents. Interface products include key scenes, actions and information hierarchy. Proposed targets, adopted gates and measurements remain distinct through tasks and startup prompts; partial answers and the current planning assignment survive checkpoints.
+
 ## Install
 
 The skill itself requires no Python runtime, API key, MCP server, or particular model. The host needs to read the skill and its supporting files. Research and filesystem capabilities are optional.
@@ -79,11 +81,14 @@ Maintainer tools require Python 3.9+:
 ```sh
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python scripts/check.py
 .venv/bin/python scripts/package.py
 ```
 
-Checks validate metadata, local file links, required resources, and bundle contents. They do not establish interview quality. Use the [behavioral evaluation scenarios](evals/README.md) for that, and read [contribution guidance](CONTRIBUTING.md) before proposing changes.
+Checks validate metadata, an explicit release manifest, Markdown local file links, sample graphs, and archive contents. Optional `scripts/check.py --spec PATH --tasks TASK_FILE` performs structural lint only; see [supported formats and limits](scripts/README.md). Python and parser libraries remain maintainer dependencies outside the runtime bundle.
+
+These checks do not establish interview quality. The [18 behavioral scenarios](evals/README.md) separate historical observations from new forward executions; native multi-host behavior remains separately evaluated. Read [contribution guidance](CONTRIBUTING.md) before proposing changes.
 
 Spec readiness is not evidence of market demand or working software. SpecForge leaves architecture and implementation details to the coding agent unless they are genuine product constraints.
 

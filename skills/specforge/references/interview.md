@@ -6,6 +6,8 @@ Read this when deciding what to ask next. Select questions that change a decisio
 
 Discover the person, situation, and outcome before the feature list. Distinguish a user from a buyer only when that difference matters. Ask about the current workaround rather than demanding market-size estimates from a beginner.
 
+Anchor discovery in one core promise: given a realistic input or situation, what useful result must the product produce, and what superficially plausible result would be wrong? Keep this visible when the user adds import formats, integrations, or convenience features. A document organizer, for example, must distinguish shared words, belonging to one project, and a genuine revision relationship; supporting more file types does not establish that distinction.
+
 For “a site where friends share timetables and find free time,” a useful opening is:
 
 1. “Who is the first version mainly for: classmates at one school, or friends across different schools?”
@@ -31,12 +33,17 @@ Manual entry becomes V1 only after the user's choice or explicit delegation; an 
 | Project | Clarify the relevant surfaces and behavior |
 | --- | --- |
 | Web or mobile app | Entry point, screens, navigation, empty/loading/error states, ownership, collaboration, offline behavior if needed |
+| Management or narrative game | A complete decision cycle, resource tradeoffs, consequences, character/history feedback, key scenes and information density; use a concrete turn or episode |
 | Script or command-line tool | Inputs, invocation, outputs, invalid input, overwrite behavior, repeat runs, partial failure; no invented pages |
 | Automation | Trigger, schedule/time zone if relevant, connected accounts, duplicate runs, retry/stop behavior, failure visibility |
 | Plugin or extension | Host application, invocation, context access, permissions, output, unsupported host states |
 | Agent skill | Trigger, inputs, conversation contract, tool availability, artifacts, handoff, resumption, boundaries |
 
 Trace one realistic journey from start to outcome. Then examine the failures that would change product behavior: missing inputs, denied access, no results, stale data, incompatible data, or a failed dependency. Do not enumerate irrelevant edge cases.
+
+For interfaces, establish the primary action and most important information in each key scene, a suitable visual direction, necessary assets, and relevant device/window limits. Record delegated suggestions as assumptions. If visual decisions remain open, define the design/prototype task that precedes dependent production; do not automatically demand concept images or a separate approval. A script does not acquire this work.
+
+Examine costly intersections: publishing while an investigation is running, navigating away with an unsaved plan, undoing a queued action, or deleting a project containing shared material. Establish the resulting state, cost, retained/lost work, and feedback. A feature list cannot settle these interactions.
 
 Describe data with familiar nouns (person, timetable, group, invitation), relationships, and visibility. A business rule such as “leaving a group immediately removes access to its shared availability” is a product decision, not a database choice.
 
@@ -49,7 +56,9 @@ Prioritize tasks by dependencies and useful outcomes. Do not force dates or nume
 ## Pace and recovery
 
 - Three unanswered questions are enough for one turn; avoid extra questions in the introduction or conclusion.
+- Select the highest-impact unknowns first. Recommend defaults for reversible details within the user's delegation; do not ask three questions merely to fill a batch or impose a fixed total number of rounds.
 - If a user only answers one, incorporate that answer and ask only what still matters.
+- With asynchronous answers, retain the batch's pending items and merge each actual answer. Do not repeat a still-visible question while waiting, interpret a preselection/timeout as submission, or proceed with dependent decisions. If execution ends, preserve the pending items and next step for resumption; a request to repeat a question should repeat only the unresolved items.
 - “I don't know” calls for a recommendation, not the same question in more technical language.
 - At a stage boundary, use a short recap: “We have chosen X. Y is a provisional assumption. Z remains open. Next we will describe the main journey.”
 - A well-specified brief can skip stages. A changed primary user may reopen stage 1. Do not restart unaffected stages.

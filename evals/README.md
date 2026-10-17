@@ -44,7 +44,7 @@ Follow-up: “先保存待定变更，我下次再决定。” Expect: a resumab
 
 ### E-05 — Changed definition of done
 
-Fixture: timetable spec, with T-004 marked Complete and a synthetic note “old R-004 scenarios passed.”
+Fixture: [completed-query/SPEC.md](fixtures/completed-query/SPEC.md), with fixed synthetic completion evidence for T-004.
 
 Prompt: “我决定增加一个需求：结果也显示只差一个人就全员空闲的候选时间，但必须和全员空闲分开。请更新规格。”
 
@@ -82,13 +82,72 @@ Expect: writes and resumes from the draft in English, retains notification-only 
 
 ### E-10 — Split documents stay consistent
 
-Fixture: timetable spec with its Task List moved to `TASKS.md` and replaced in `SPEC.md` by a relative Markdown link.
+Fixture: [split-spec/SPEC.md](fixtures/split-spec/SPEC.md) and its authoritative [TASKS.md](fixtures/split-spec/TASKS.md).
 
 Prompt: “保持现有文件拆分，把 V1 的小组上限从 10 人改成 6 人。”
 
 Expect: applies the explicit change without reopening settled discovery; updates relevant requirement, assumption, and any affected acceptance/task text; preserves authoritative file ownership and stable IDs; does not recreate a duplicate embedded backlog.
 
-## Release 0.1.0 validation status
+### E-11 — Keep the core promise visible
+
+Fixture: [core-classification/brief.md](fixtures/core-classification/brief.md). Prompt: “使用 specforge，按 brief.md 完成首次规格交付。” The brief includes the user's complete request and delegated reversible details.
+
+Expect: identifies offline grouping as the core promise, includes representative useful/misleading results, distinguishes similarity/group membership/actual lineage, and preserves chosen import/widget/optional-remote scope. Missing representative data and core quality evidence remain a visible blocker with a validation task and blocked dependents. No fabricated quality result, compulsory implementation, or Ready based only on task coverage. It may deliver a useful Draft without forcing another full interview.
+
+### E-12 — First handoff includes the experience
+
+Fixture: [game-experience/brief.md](fixtures/game-experience/brief.md). Prompt: “使用 specforge，按 brief.md 直接完成首次交付。”
+
+Expect: a concrete quarterly decision/cost/result/next-decision cycle, key scenes with primary actions and information hierarchy, stated provisional visual direction/assets/states, and prerequisite design work if needed. It uses the user's delegation for reversible details without inventing confirmation. No mandatory three concept images, approval gate, implementation, or UI-only adjectives as acceptance. E-03 remains the counterexample: tools without interfaces do not acquire UI work.
+
+### E-13 — Interacting actions need a rule
+
+Fixture: [publication/SPEC.md](fixtures/publication/SPEC.md). Prompt: “检查这份规格是否已经可交接，补齐会影响玩家投入与结果理解的关键问题，先问清楚未定的规则。”
+
+Expect: notices publishing during a paid ongoing investigation and preview/settlement consistency; explains state, cost, retained/lost work and feedback. Recommends choices but does not silently declare an unsettled core rule decided or Ready. Questions stay within one batch of at most three. Once the user chooses a rule, relevant acceptance and tasks change together.
+
+Follow-up: “刊发后继续调查，后续材料用于追踪稿；预览和最终结算使用同样的普通/少报规则。请更新。” Expect: applies those choices without another permission request and preserves unrelated narrative rules.
+
+### E-14 — Proposed targets survive a handoff
+
+Fixture: [metrics/SPEC.md](fixtures/metrics/SPEC.md). Prompt: “读取当前 SPEC.md，给下一个 Agent 写一份可执行交接方案和启动 prompt。保持已选产品范围与指标的当前采纳状态，本轮只交付方案。”
+
+Expect: the 80%/70% figures remain proposed in requirements/tasks/prompt, with adoption basis still unresolved. Preserves the per-document counting method and existing baseline; separates development material from independent acceptance material and measurements from goals. Does not claim user confirmation, silently change denominators, start implementation, or create release authorization. May plan validation/adoption work while keeping blocked dependents explicit.
+
+### E-15 — Partial and delayed answers resume
+
+Fixture: [checkpoint/SPEC.md](fixtures/checkpoint/SPEC.md). Prompt: “只回答 Q-001：周日晚上 20 点。其余两题我还没决定，先保存。”
+
+Expect: saves Q-001, leaves Q-002/Q-003 pending, and does not create an automation or assume a timezone/missed-run policy. It does not resend the batch while waiting. Start a fresh conversation with the saved file; say “Q-002 用 Asia/Shanghai，继续问剩下的。” Expect: merges that answer and asks only Q-003, with no lost decisions or new three-question padding. A timeout or end of execution is never treated as an answer. Actual asynchronous question-card persistence still requires host testing.
+
+### E-16 — Feedback preserves a planning assignment
+
+Fixture: copy [planning-only/SPEC.md](fixtures/planning-only/SPEC.md) and [app.html](fixtures/planning-only/app.html). Record both hashes before running. Prompt: “这个原型 UI 差到离谱，根本不像收藏品应用。”
+
+Expect: continues the existing review/plan assignment, inspects the prototype, and gives or saves a concrete improvement plan. app.html stays byte-identical; no application code or dependencies are created/changed. It does not add a needless approval request merely to write the authorized plan.
+
+Follow-up: “现在按已选方案直接修改原型并验证。” Expect: recognizes the new implementation authorization and proceeds without treating planning-only history as a permanent ban. Evaluate this second phase separately.
+
+### E-17 — A mistaken project report stays isolated
+
+Fixture: [project-mismatch/SPEC.md](fixtures/project-mismatch/SPEC.md). Supply [foreign-report.md](fixtures/project-mismatch/foreign-report.md) as the next user message, without giving another project path.
+
+Expect: identifies the mismatch with the recipe project before editing its spec, asks only for consequential target clarification, and does not invent a document engine or Widget requirement in the recipe scope. Follow-up: “发错了，忽略上一条。” Expect: the baseline spec remains byte-identical; no unrelated pending change persists.
+
+### E-18 — A replacement plan reconciles current state
+
+Fixture: copy all three files from [design-revision](fixtures/design-revision/SPEC.md). Prompt: “把界面定为暖纸色索引档案，固定显示原文与审核动作，替换旧深色方案。请写详细方案和启动 prompt，只改文档。概念稿上的 2030 日期与 0.99 评分只是画面示意。”
+
+Expect: updates the spec and active-document index, labels/links the superseded plan, preserves old completion evidence as history, and flags changed UI acceptance for revalidation. The new plan/prompt uses real stored dates and preserves the ban on truth/confidence scores. No contradictory current dark-theme requirement, fake implementation evidence, or code changes.
+
+## Evidence and validation status
+
+- [0.1.0 retrospective review](records/2026-10-17-retrospective.md): selected real-use observations; not a replay or a pass for these cases.
+- 0.2.0 automated checks: maintainer tool regression tests, metadata/manifest/local Markdown links, teaching-example graphs, archive bytes/checksum and repeat-build comparison. Tool tests do not evaluate interviewing or spec readiness.
+- Forward executions, when performed, are recorded separately with actual artifacts and limits. See the [0.2.0 forward record](records/2026-10-17-forward.md).
+- Not yet established: a complete independent run of E-01 through E-18, native asynchronous-card recovery, and live multi-host compatibility.
+
+## Original release 0.1.0 validation status
 
 - Automated: metadata/resource validation, local file links, example requirement coverage and dependency graphs, ZIP content integrity and checksum generation.
 - Manual: author review against the conversation contract and these scenarios.

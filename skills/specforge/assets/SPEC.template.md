@@ -5,10 +5,13 @@
 Status: {{Draft | Ready for implementation}}
 Updated: {{date}}
 Current stage / next step: {{discovery stage or handoff}}
+Current assignment: {{discovery, specification revision, or executable plan; operations actually authorized}}
 
 ## Product and users
 
 {{Positioning, primary user, concrete situation, pain/current workaround, and desired outcome. Distinguish intended value from evidence of demand.}}
+
+Core promise: {{Representative input/situation → useful result; counterexample or failure boundary. Explain how a quality-dependent promise will be evaluated and which uncertainty could invalidate V1.}}
 
 ## Scope
 
@@ -28,6 +31,10 @@ Current stage / next step: {{discovery stage or handoff}}
 
 {{Relevant pages, commands, triggers, or interaction surfaces; main journey and important empty/error cases.}}
 
+{{For interface products only: primary actions, information hierarchy, chosen/open visual direction, required assets, device/window limits, and prerequisite design work. For games, include a concrete decision/cost/result/next-decision cycle.}}
+
+{{For consequential combinations: current state + action → resulting state, cost, retained/lost work, feedback. Link end-to-end scenarios to requirements/tasks.}}
+
 ## Requirements and acceptance
 
 ### R-001 — {{Observable outcome}}
@@ -41,6 +48,8 @@ Current stage / next step: {{discovery stage or handoff}}
 ## Constraints and quality
 
 {{User-supplied limits and observable quality expectations relevant to this project. Label proposed targets.}}
+
+{{For critical targets: definition/counting method, dataset/source, proposed or adopted status and its basis, related IDs. Record measurements/evidence separately; distinguish development from acceptance material.}}
 
 ## Roadmap
 
@@ -58,6 +67,10 @@ Current stage / next step: {{discovery stage or handoff}}
 
 {{List unresolved blockers explicitly, or state there are none. For sourced claims, record source links and access dates, with inferences separate.}}
 
+{{For a pause: pending question batch, partial answers, and next unresolved decision. For an unresolved revision: preserve the baseline and label the pending change with affected IDs.}}
+
 ## Handoff
 
 {{Readiness result, remaining blockers, and the next useful action. Ready describes the spec, not tested software. Record substantive revisions here when updating an existing spec.}}
+
+{{Name work allowed before validation and blocked dependent tasks. If multiple files exist, index their roles and active revisions; link superseded plans. When requested, provide an executable startup prompt preserving actual scope, authorization, dependencies, artifacts, evidence, and target adoption states.}}
