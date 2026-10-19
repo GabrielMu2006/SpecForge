@@ -1,0 +1,634 @@
+{
+  "date": "2026-10-17",
+  "runtime_version": "0.2.0",
+  "source_commit": "0120f132dc88a9d424408072393b67bc94646258",
+  "harness": "harness.json",
+  "runtime_sha256": {
+    "LICENSE": "42d98b0ff1e06721df475f5695e040279f7b33fcc89499bfce313cc57e9e0e84",
+    "SKILL.md": "32da5e26181d4292732619d883e8f7b1b52a63c729a87e56900e9f6b2bc3b782",
+    "references/specification.md": "090d528e895a45be24bbcf88c89f4ff23a20798536cad2c0e5ba5b53f606241f",
+    "references/interview.md": "c0cd8275937395bba587ab162918c8ad743fa88b37a18956e0d3d103ee92db46",
+    "references/revisions.md": "86d8a029a31f6e87dce4027237317b527563249ba9fde00df39668a59a1dff3c",
+    "agents/openai.yaml": "48e319b068f0c8a432e7b9c4383272070513795a5dcfea063f91d97807d260b5",
+    "assets/SPEC.template.md": "35f068b83d7317cf8a65c5c0f14d107e0694ed1a0d16fce6c126c016ec592bd3"
+  },
+  "report_sha256": "7ab60909071363ef8d61a0d7e5f52cc85c9fb424dd44cd770a9ada786c38304e",
+  "cases": {
+    "E-01": {
+      "input_sha256": {},
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {}
+        },
+        {
+          "snapshot": "after-turn-2",
+          "request": "turn-2.request.txt",
+          "response": "turn-2.response.txt",
+          "added": [],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {}
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "catalog-entry routing only"
+    },
+    "E-03": {
+      "input_sha256": {
+        "SPEC.md": "0be410b4db4a139e8156c08b637acd619f6e36f743aac43d9618b0fd6e3fba15"
+      },
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [
+            "SPEC.md"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "57aeaab602c75cb7e129c39b91bfc553f7c20f04873f1f6836688dbf4d5c23b8"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "see report for scope"
+    },
+    "E-04": {
+      "input_sha256": {
+        "SPEC.md": "4594e96af6551a9d00069c3789744c24b9bccccc16d9038f69656692384ef7f5"
+      },
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [
+            "SPEC.md"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "38e4f28ce170c5948f5fb4d7d9a567532aae7bb2eca39be1d3754e4b9cf41ee9"
+          }
+        },
+        {
+          "snapshot": "after-turn-2",
+          "request": "turn-2.request.txt",
+          "response": "turn-2.response.txt",
+          "added": [],
+          "changed": [
+            "SPEC.md"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "fe1ec239140371973bce28833b078e4e60c88bcb673649d6e8c88593bbfa058f"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "see report for scope"
+    },
+    "E-05": {
+      "input_sha256": {
+        "SPEC.md": "9a362748ce800262e0b1d9063d5d635e61554aff30efa20868df95edda4dc64b"
+      },
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [
+            "SPEC.md"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "f3a0cb8d866c5485ba482be690e89d46129c6d9131b4cf1e5b915e24be19f4f7"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "see report for scope"
+    },
+    "E-06": {
+      "input_sha256": {},
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [
+            "SPEC.md"
+          ],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "a11e20ea14ea930563a925f654d7a1e28add23458fb58b29c7954e0c035939f3"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "prompt-constrained tools"
+    },
+    "E-07": {
+      "input_sha256": {},
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {}
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "prompt-constrained tools"
+    },
+    "E-08": {
+      "input_sha256": {},
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {}
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "catalog-entry routing only"
+    },
+    "E-09": {
+      "input_sha256": {},
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {}
+        },
+        {
+          "snapshot": "after-turn-2",
+          "request": "turn-2.request.txt",
+          "response": "turn-2.response.txt",
+          "added": [
+            "SPEC.md"
+          ],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "a118174db18c830982a6fa82d7a758a826d11aac16fc26be977a9a234a9c509a"
+          }
+        },
+        {
+          "snapshot": "after-turn-3",
+          "request": "turn-3.request.txt",
+          "response": "turn-3.response.txt",
+          "added": [
+            "SPEC.md"
+          ],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "a118174db18c830982a6fa82d7a758a826d11aac16fc26be977a9a234a9c509a"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "text-turn fresh-session recovery, not native cards"
+    },
+    "E-10": {
+      "input_sha256": {
+        "TASKS.md": "d8c1ddae21ba33e70cbeacd7871b29d3adfbabd436aa503671a4f1d0296f814c",
+        "SPEC.md": "35bdca59467fc60b47adaa2cde0eb9dc038e0a36e7bde5fb40340e1a142f2c4f"
+      },
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [
+            "SPEC.md",
+            "TASKS.md"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "9739b6cbae00bc1781454d88f5765c7ad932bf51a0686324d5aec17182bea8b5",
+            "TASKS.md": "ec702b791108af0feaca63084c3dff5b6e53c98a907b7ca3cb2aaf783d913917"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "see report for scope"
+    },
+    "E-12": {
+      "input_sha256": {
+        "brief.md": "fcfd4226d363f26288241ddfea14152b1d3e82dfa0d7272827582665ec3f98ef"
+      },
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [
+            "SPEC.md"
+          ],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "a20903743ba195da17feb35b79db87eccc5d27d145ba81b5a2460c78ca94e334",
+            "brief.md": "fcfd4226d363f26288241ddfea14152b1d3e82dfa0d7272827582665ec3f98ef"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "see report for scope"
+    },
+    "E-13": {
+      "input_sha256": {
+        "SPEC.md": "68c9ef9e83d5b6fb438bbd6239b026f2ed77be8c40e9726b2397c90fdb33cc33"
+      },
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [
+            "SPEC.md"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "7594feb3a676979b34da404091b57764255e1e53ba89307f0c6e99d6ad851cde"
+          }
+        },
+        {
+          "snapshot": "after-turn-2",
+          "request": "turn-2.request.txt",
+          "response": "turn-2.response.txt",
+          "added": [],
+          "changed": [
+            "SPEC.md"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "0fdc0f44c1622cb357842ee312d4d7f693cdc1970ad3dec7604106b0b410b698"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "see report for scope"
+    },
+    "E-15": {
+      "input_sha256": {
+        "SPEC.md": "c7bd985ab7487a1ffb001735b51cfb21996fe40ee093c52a1d4dfd214e5360d2"
+      },
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [
+            "SPEC.md"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "e4394704585809856f052491d476a536e37dc180607ca9ff5d7b0a211801665c"
+          }
+        },
+        {
+          "snapshot": "after-turn-2",
+          "request": "turn-2.request.txt",
+          "response": "turn-2.response.txt",
+          "added": [],
+          "changed": [
+            "SPEC.md"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "21d1479e1ff46de5a36652516bb95d5c3f57d201b0252bc8623ddedf7b3ee539"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "text-turn fresh-session recovery, not native cards"
+    },
+    "E-16-phase2": {
+      "input_sha256": {
+        "SPEC.md": "192d7e504b47d87540ae2f61215644f26f75c8ca4a269bceff93266f2659a991",
+        "app.html": "ec4f954ff8fc4ecb6f2d4d8036adc9349f497fc75fc1acfc99caa880f5a50473"
+      },
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [
+            "DESIGN.md",
+            "VERIFY.md",
+            "output/playwright/checks.js",
+            "output/playwright/detail-1440.png",
+            "output/playwright/detail-375.png",
+            "output/playwright/detail-zoom-200.png",
+            "output/playwright/empty-1440.png",
+            "output/playwright/empty-375.png",
+            "output/playwright/list-1440.png",
+            "output/playwright/list-zoom-200.png",
+            "output/playwright/mixed-1440.png",
+            "output/playwright/mixed-375.png",
+            "output/playwright/mixed-768.png",
+            "output/playwright/results.json",
+            "output/playwright/results.txt"
+          ],
+          "changed": [
+            "SPEC.md",
+            "app.html"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "DESIGN.md": "ee193f5134f759e6eafbb717b0fe3253acac667f10a90233406ef8055f9572b2",
+            "SPEC.md": "bfb63df42abbc44b6ba9b59c5c911834b151f5ad09642f6cdd3a4019a8134a31",
+            "VERIFY.md": "48b9bb9963fcf70d160a67c735bd7999c0b6a647204874009a39702e16ba1b2d",
+            "app.html": "cc736257819a2866f3876c65288d4bbaa2d9f68ccfd1981909aa27c9e146e276",
+            "output/playwright/checks.js": "344dd03cc325e2c58d6c3512e79110555f5150d0c71e0167f3089b83b345e550",
+            "output/playwright/detail-1440.png": "c2b57272f16027da7ef344ef0021644889ffe8face41f224d52c92194e1a25ca",
+            "output/playwright/detail-375.png": "d2c3e31b42cd71b6201fe38cdc2d94ff95b286b4d981aac7ca59acc839f45a52",
+            "output/playwright/detail-zoom-200.png": "e505c9582854bbc256e2035c37589f82fcb1b8b01cab40f98524417a1ae6c8b4",
+            "output/playwright/empty-1440.png": "048438c767b376cf2bcd5440450cd4e8adfacd1a7448fc827883367f82487725",
+            "output/playwright/empty-375.png": "6dbd31faaa09c6a293af1dfaed4a5aa21a91c27c4fd2674d548c55c9fb01f017",
+            "output/playwright/list-1440.png": "353029fe4965097877186e10ebf386643d5dbf11d81608cf02fed0670c72db05",
+            "output/playwright/list-zoom-200.png": "c3db302f2beadeede77fc5dd83fb4a5723d1079c2d65e1d26605c7620c165c56",
+            "output/playwright/mixed-1440.png": "c2f12889a43236af023e285a9092244f7748d7917f3c487b3bdf140ccda84640",
+            "output/playwright/mixed-375.png": "9796414c7dd14aa84cf0fff71a1d6c5a3a632ce3b159dfcd638e172735128bd8",
+            "output/playwright/mixed-768.png": "3ad42548ddda7ad7d15995590181d60c855216d3e359c81efa784c011acc00f2",
+            "output/playwright/results.json": "e71596ef84ec859522c8cc073239c7aa74b35b8121367ea57e7094d877420c34",
+            "output/playwright/results.txt": "16e31189d2678d1799b0858befbb2168b38d5b1c02f409a51e0498b9344e666d"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "see report for scope"
+    },
+    "E-17": {
+      "input_sha256": {
+        "foreign-report.md": "53c595689382bf5e5fbf40a5d624460886d888ecd4bf60d0f083370dfb8520ef",
+        "SPEC.md": "d1d5eef344b15d97977b87bd51e3b66941286cd1d8f230bbad31ccc019787dc4"
+      },
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "d1d5eef344b15d97977b87bd51e3b66941286cd1d8f230bbad31ccc019787dc4",
+            "foreign-report.md": "53c595689382bf5e5fbf40a5d624460886d888ecd4bf60d0f083370dfb8520ef"
+          }
+        },
+        {
+          "snapshot": "after-turn-2",
+          "request": "turn-2.request.txt",
+          "response": "turn-2.response.txt",
+          "added": [],
+          "changed": [],
+          "removed": [],
+          "files_sha256": {
+            "SPEC.md": "d1d5eef344b15d97977b87bd51e3b66941286cd1d8f230bbad31ccc019787dc4",
+            "foreign-report.md": "53c595689382bf5e5fbf40a5d624460886d888ecd4bf60d0f083370dfb8520ef"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "see report for scope"
+    },
+    "E-18": {
+      "input_sha256": {
+        "UI-PLAN-OLD.md": "1a86928103cde861f638f20bc86e5cd13caa6ad42390d6a5376d8d06926ccc63",
+        "SPEC.md": "2193a846285b8ce2f5815384290a339454e031e444b02b136a53fd48e3143934",
+        "ACCEPTANCE.md": "5dfe83990e3b67d213de52b307e4037b7ab33c8cf41969566daec168c58774bd"
+      },
+      "turns": [
+        {
+          "snapshot": "after-turn-1",
+          "request": "turn-1.request.txt",
+          "response": "turn-1.response.txt",
+          "added": [
+            "STARTUP-PROMPT.md",
+            "UI-PLAN.md"
+          ],
+          "changed": [
+            "ACCEPTANCE.md",
+            "SPEC.md",
+            "UI-PLAN-OLD.md"
+          ],
+          "removed": [],
+          "files_sha256": {
+            "ACCEPTANCE.md": "a1434bd151b737d73d311a3b9f202fb653ef683115b44d312395fc2ebad726d8",
+            "SPEC.md": "337245c135cc5d39b9bc5610b2567c594161a57f6c969c8d458dbe0a3c7debfe",
+            "STARTUP-PROMPT.md": "8a470f473c75b97a0162fc5e612605aea87d2fbff749fc41612bb09245080c90",
+            "UI-PLAN-OLD.md": "1e512e8f087682b22daf9a8da6ea11cc7c635443a9c6ba146adc71b8c79e874f",
+            "UI-PLAN.md": "2075e60e14182121001107dc302923107efe5bb28ff923639da4ba724b26de9a"
+          }
+        }
+      ],
+      "result": "observed pass within documented harness",
+      "qualification": "see report for scope"
+    }
+  },
+  "verification": {
+    "unit_tests": {
+      "count": 37,
+      "result": "pass",
+      "log": "verification/unittest.txt"
+    },
+    "skill_format": {
+      "result": "pass",
+      "log": "verification/quick-validate.txt"
+    },
+    "repository": {
+      "result": "pass",
+      "runtime_links": 5,
+      "repository_links": 134,
+      "example_requirements": 7,
+      "example_tasks": 9,
+      "log": "verification/check.txt"
+    },
+    "additional_structure_checks": "verification/structures.json",
+    "artifact_invariants": "verification/invariants.json",
+    "package": {
+      "result": "pass",
+      "files": 7,
+      "size": 17005,
+      "sha256": "1ae23a618015dead5181cc12623014c32672b781b783ffd8021b25a3f1f2fedc",
+      "log": "verification/package.txt"
+    },
+    "assembly_issue": "Initial check/package ran before the new manifest existed; retained initial logs, generated manifest, final checks passed. No runtime defect."
+  },
+  "files_sha256": {
+    "E-01/after-turn-1.json": "a07ffe5e197df1b4fb77a5ad24e0bab526245e299a092ec66e8ae872b6c64ed7",
+    "E-01/after-turn-2.json": "83c5434916da607c029bcc80824cdd5c24cabca67b1054f1026889a93f60f62d",
+    "E-01/dispatch.txt": "f6d3597f8e16558f0154766f30d87b5220ef08ef33d461c25797f6be5a315a8e",
+    "E-01/turn-1.request.txt": "f0b7bae2710f198573e4b95a29388bf6f9608a7272d80aca8dd28ce830a2fc48",
+    "E-01/turn-1.response.txt": "3aea0d951ea82d5f063bbfc13827db184a2d3baac635769fa5eead82c801fdb8",
+    "E-01/turn-2.request.txt": "7894dc4b69cd71bad4b2f6f30faf6ba88cab6026b24e038f70c7d3ef9bd5e27d",
+    "E-01/turn-2.response.txt": "255614aac90d11af46b69cdc6c8b98e1d0d8d4a287a87096810c76e318800a3f",
+    "E-03/after-turn-1/SPEC.md": "57aeaab602c75cb7e129c39b91bfc553f7c20f04873f1f6836688dbf4d5c23b8",
+    "E-03/after-turn-1.json": "e9f2b850a358f06204e01af380b44da628d290e8b7aa46a65bc43cddedaee88a",
+    "E-03/before/SPEC.md": "0be410b4db4a139e8156c08b637acd619f6e36f743aac43d9618b0fd6e3fba15",
+    "E-03/dispatch.txt": "9557cdc499e793789494ace350b542d49e7e6419c1c58c1a454e5176948911c1",
+    "E-03/turn-1.request.txt": "39474dbb6ff9019e83f8c237c3b30930c4ebf80d786e333949e72c5cf8ce6535",
+    "E-03/turn-1.response.txt": "22967081aedc618de9fec8f32b57f446e1a02225866716be7e5389d15a0a31f8",
+    "E-04/after-turn-1/SPEC.md": "38e4f28ce170c5948f5fb4d7d9a567532aae7bb2eca39be1d3754e4b9cf41ee9",
+    "E-04/after-turn-1.json": "ab151167210f7b25e7200aa68287d5bcfdc104f7283c1aa1ad986e7309db331c",
+    "E-04/after-turn-2/SPEC.md": "fe1ec239140371973bce28833b078e4e60c88bcb673649d6e8c88593bbfa058f",
+    "E-04/after-turn-2.json": "c2d3c5049c6e875405ea0908ed4e66d195cb486547b9296aa44db7f831b73798",
+    "E-04/before/SPEC.md": "4594e96af6551a9d00069c3789744c24b9bccccc16d9038f69656692384ef7f5",
+    "E-04/dispatch.txt": "4af377fc745ebdcea7435c18b4ed29cf8bf875f62d1a1e208c0903696be4b922",
+    "E-04/turn-1.request.txt": "671b299284fd32ac1be8be3bd7a8d76423b594f1b40b7bc02c534a3c11f979cb",
+    "E-04/turn-1.response.txt": "d46a1e0085d96522f37a19d036cb1d35c6f0c70da41c564704e43919415ac2ca",
+    "E-04/turn-2.request.txt": "e8fed0b1dbf41829534134471f0ea52b4f7fc5edd038177ea1007497d11a5f55",
+    "E-04/turn-2.response.txt": "6e3321e588a6b247eccb4e0f00d53d2e2ef8f9b9517706b05eeba92db6bed495",
+    "E-05/after-turn-1/SPEC.md": "f3a0cb8d866c5485ba482be690e89d46129c6d9131b4cf1e5b915e24be19f4f7",
+    "E-05/after-turn-1.json": "4e050c17f14d9dbbc5531c59c783be9bba3dc89a989396926172daa45f7ad598",
+    "E-05/before/SPEC.md": "9a362748ce800262e0b1d9063d5d635e61554aff30efa20868df95edda4dc64b",
+    "E-05/dispatch.txt": "bc802f99e47fa7b9043c0fc134a1539f9311ae5b00a6cc0be75a4764cb955473",
+    "E-05/turn-1.request.txt": "76f564dad572304d4c84e2a3939504df62cc1072a4cccd0e3b2727c6dc1e7d01",
+    "E-05/turn-1.response.txt": "50440adfb676f8467634295c5e495c162f4cefa8a466953c5b7b3db7951b4ffa",
+    "E-06/after-turn-1/SPEC.md": "a11e20ea14ea930563a925f654d7a1e28add23458fb58b29c7954e0c035939f3",
+    "E-06/after-turn-1.json": "1feceb7daeb441c61a3191e550d565351d3b41941fcdec43be74dbd73046ef18",
+    "E-06/dispatch.txt": "db295f14ed7f6c02418bdf2c3558a2872a338709fb532f2335cf41b72c2f5e53",
+    "E-06/turn-1.request.txt": "574c262048a8a333a9185402839307bf53a7520f012331bc089b2c78b993787b",
+    "E-06/turn-1.response.txt": "d509d05219bd8db7b5256e414a38a440122c4f6d3b917632cdaf538f39b8142a",
+    "E-07/after-turn-1.json": "6b9efd23970d156e1ca3252672a7cb83c2560db3f260f6cc0a074be6c378b0bc",
+    "E-07/dispatch.txt": "3a11d779c196c2662d1d042f399e71ec03e718cb6ed8226511b6a4d69eb2afc0",
+    "E-07/turn-1.request.txt": "e59468cf51fe9083549cf34b33dfe7763639972325a3aaa9cd6507c8bc0f8aea",
+    "E-07/turn-1.response.txt": "d6991230cd8242362064b1ba9eff1d17ca4931c2df55dd08e1f581d5640cad9e",
+    "E-08/after-turn-1.json": "2eb3e200f0338f1350d98c8aef1c6e51d4193e9a646447bdb7dca9c190c5afdd",
+    "E-08/dispatch.txt": "cd84fff4dd1bdcdaa13fec5f205f258c023d5f8365305d35f77e0f141332a5cf",
+    "E-08/turn-1.request.txt": "aeaad078baba742a3dd7f269e1c9dd2faa452d026397120476bdaefa8103b04d",
+    "E-08/turn-1.response.txt": "d729fc5c68556f3fc079c23c22672150050df721fbd080207a5f72f198360850",
+    "E-09/after-turn-1.json": "210c6fd5f83d5eba93ebf97c1271a39fdcdcc3e1569ce4128b3ef86e81dd93d3",
+    "E-09/after-turn-2/SPEC.md": "a118174db18c830982a6fa82d7a758a826d11aac16fc26be977a9a234a9c509a",
+    "E-09/after-turn-2.json": "c16f142e21d21fc4f6e4e513daf3953c1917d1a48dc28ea3270bb776fc427b3c",
+    "E-09/after-turn-3/SPEC.md": "a118174db18c830982a6fa82d7a758a826d11aac16fc26be977a9a234a9c509a",
+    "E-09/after-turn-3.json": "e99872c724106a02cf40cc5967408fcfa55c9e9d00af2dff0233f6b5c533586c",
+    "E-09/dispatch.txt": "65f41e9ccfe8f30b20f3f98b3106dbec5236a2f1dd6d122afb40feaa7f8e67d2",
+    "E-09/turn-1.request.txt": "4f77ff62a885f8c8fe9482b8751dfbf0eb39cf28d74b6c155f4e5e3c45701df3",
+    "E-09/turn-1.response.txt": "7fb16f7c3e55877aa91d719e56fdfd34f56e3e26bdf39f1575e5b60c04e08164",
+    "E-09/turn-2.request.txt": "bfb606b9156b38a4007c422fd34a12cde6bbe93bd2da2022ed38a8739c9d37f6",
+    "E-09/turn-2.response.txt": "dfe97757a27f48c7785993f2d70990c73d5a997cafdace5577fc6daac57b6016",
+    "E-09/turn-3.request.txt": "7e68ebf10833b4310549959147f5264c88818b9ca46db2c13c2f1e5d4191a258",
+    "E-09/turn-3.response.txt": "1b30f1bbb51a52e20fdd61cdf4dbbb2af6ca0050a1f2b3149498ada533eaba44",
+    "E-10/after-turn-1/SPEC.md": "9739b6cbae00bc1781454d88f5765c7ad932bf51a0686324d5aec17182bea8b5",
+    "E-10/after-turn-1/TASKS.md": "ec702b791108af0feaca63084c3dff5b6e53c98a907b7ca3cb2aaf783d913917",
+    "E-10/after-turn-1.json": "13a612c9f7e37925807eb8707bcada03729a973aaf076e253151517d54d09138",
+    "E-10/before/SPEC.md": "35bdca59467fc60b47adaa2cde0eb9dc038e0a36e7bde5fb40340e1a142f2c4f",
+    "E-10/before/TASKS.md": "d8c1ddae21ba33e70cbeacd7871b29d3adfbabd436aa503671a4f1d0296f814c",
+    "E-10/dispatch.txt": "6f6ff3d80393bd6b3e49f33fbbeea2e3bc914c70d5b919d24b6e500ec442a6a8",
+    "E-10/turn-1.request.txt": "ff5cdf4274b128f81700793b1cc1580524e7cddb98ff314f859358700f311b14",
+    "E-10/turn-1.response.txt": "bca3953a176547c35636a725f17ee2322fef36944ea5c37e4abd556b5c0437a5",
+    "E-12/after-turn-1/SPEC.md": "a20903743ba195da17feb35b79db87eccc5d27d145ba81b5a2460c78ca94e334",
+    "E-12/after-turn-1/brief.md": "fcfd4226d363f26288241ddfea14152b1d3e82dfa0d7272827582665ec3f98ef",
+    "E-12/after-turn-1.json": "c87b5f7bee7c0f3a451df22b0920b81b9e4dc3a9ea00ffb013192adff734c9b2",
+    "E-12/before/brief.md": "fcfd4226d363f26288241ddfea14152b1d3e82dfa0d7272827582665ec3f98ef",
+    "E-12/dispatch.txt": "1861cef3b9b69b27915a0161638b55b1a2072640d6586895097e0d52b8e3c63c",
+    "E-12/turn-1.request.txt": "46e09e3c746b2012c16fd801ad7be63acb04d8f4cea63ed0c5b764e72924bf50",
+    "E-12/turn-1.response.txt": "59469f5c5e525b176fa25a11e53f4aaad02cbe000377c9ce45df8183a888ca70",
+    "E-13/after-turn-1/SPEC.md": "7594feb3a676979b34da404091b57764255e1e53ba89307f0c6e99d6ad851cde",
+    "E-13/after-turn-1.json": "ae2d0bbd89a1c2ebc4d00c7ebddcbf517ed52d2d07ae8b3f31fd4af6d16d594b",
+    "E-13/after-turn-2/SPEC.md": "0fdc0f44c1622cb357842ee312d4d7f693cdc1970ad3dec7604106b0b410b698",
+    "E-13/after-turn-2.json": "56624ac82c3d87b51c4beb17950a13a58d6d58cbca3fe1ed434c1028d35d7e93",
+    "E-13/before/SPEC.md": "68c9ef9e83d5b6fb438bbd6239b026f2ed77be8c40e9726b2397c90fdb33cc33",
+    "E-13/dispatch.txt": "1e86c2aa458a73b55dadd2c928fcbc951a8af1cbc8b5000a444f74dc69610ee1",
+    "E-13/turn-1.request.txt": "e2e4bf65805ef6f9032189301cac62149f6e260a0e95df175a763de5a9dd855b",
+    "E-13/turn-1.response.txt": "d050728cf3d9060cb6d8e4e5217950a7b437e228025fa7991a4e739396326746",
+    "E-13/turn-2.request.txt": "9aea3d98876cbaa6b1f3eeeb805113f7177b1ebfa043bc19c937bda532988063",
+    "E-13/turn-2.response.txt": "8f5ec95599d63b42cd548b2e2e07b80c5bffd3febeeb4383b5154f446ece3f04",
+    "E-15/after-turn-1/SPEC.md": "e4394704585809856f052491d476a536e37dc180607ca9ff5d7b0a211801665c",
+    "E-15/after-turn-1.json": "d128f944fe202c673caedbb8edcee6038f3cfc2c6c9ca8f4d4302cff620af175",
+    "E-15/after-turn-2/SPEC.md": "21d1479e1ff46de5a36652516bb95d5c3f57d201b0252bc8623ddedf7b3ee539",
+    "E-15/after-turn-2.json": "3a76540923c0387070c7e08e9ba14db75e04924ff69f565a553b68ad316c47cb",
+    "E-15/before/SPEC.md": "c7bd985ab7487a1ffb001735b51cfb21996fe40ee093c52a1d4dfd214e5360d2",
+    "E-15/dispatch.txt": "6c9e2ecdeb94c30d6186ee8b1d20fb841df29e5fed4cb9c70f44f72be672703c",
+    "E-15/turn-1.request.txt": "eec3c04fd64e51679758bdf7af3ceec09ccbe2db823bf86f07239932fd3b986c",
+    "E-15/turn-1.response.txt": "7dfaaf3c5235e0022362934cc8b556f47ed5b2f36525cd0e60aa6b9887e410f4",
+    "E-15/turn-2.request.txt": "ebc27e9559ebbf7fcb71c14e76ba7ee0dcd29e7f32c9c7362e90e8216626efbc",
+    "E-15/turn-2.response.txt": "d424ad812e1d7cf0c557ef3d3223b7d1260d624c37f7cfb13328b676e822786f",
+    "E-16-phase2/after-turn-1/DESIGN.md": "ee193f5134f759e6eafbb717b0fe3253acac667f10a90233406ef8055f9572b2",
+    "E-16-phase2/after-turn-1/SPEC.md": "bfb63df42abbc44b6ba9b59c5c911834b151f5ad09642f6cdd3a4019a8134a31",
+    "E-16-phase2/after-turn-1/VERIFY.md": "48b9bb9963fcf70d160a67c735bd7999c0b6a647204874009a39702e16ba1b2d",
+    "E-16-phase2/after-turn-1/app.html": "cc736257819a2866f3876c65288d4bbaa2d9f68ccfd1981909aa27c9e146e276",
+    "E-16-phase2/after-turn-1/output/playwright/checks.js": "344dd03cc325e2c58d6c3512e79110555f5150d0c71e0167f3089b83b345e550",
+    "E-16-phase2/after-turn-1/output/playwright/detail-1440.png": "c2b57272f16027da7ef344ef0021644889ffe8face41f224d52c92194e1a25ca",
+    "E-16-phase2/after-turn-1/output/playwright/detail-375.png": "d2c3e31b42cd71b6201fe38cdc2d94ff95b286b4d981aac7ca59acc839f45a52",
+    "E-16-phase2/after-turn-1/output/playwright/detail-zoom-200.png": "e505c9582854bbc256e2035c37589f82fcb1b8b01cab40f98524417a1ae6c8b4",
+    "E-16-phase2/after-turn-1/output/playwright/empty-1440.png": "048438c767b376cf2bcd5440450cd4e8adfacd1a7448fc827883367f82487725",
+    "E-16-phase2/after-turn-1/output/playwright/empty-375.png": "6dbd31faaa09c6a293af1dfaed4a5aa21a91c27c4fd2674d548c55c9fb01f017",
+    "E-16-phase2/after-turn-1/output/playwright/list-1440.png": "353029fe4965097877186e10ebf386643d5dbf11d81608cf02fed0670c72db05",
+    "E-16-phase2/after-turn-1/output/playwright/list-zoom-200.png": "c3db302f2beadeede77fc5dd83fb4a5723d1079c2d65e1d26605c7620c165c56",
+    "E-16-phase2/after-turn-1/output/playwright/mixed-1440.png": "c2f12889a43236af023e285a9092244f7748d7917f3c487b3bdf140ccda84640",
+    "E-16-phase2/after-turn-1/output/playwright/mixed-375.png": "9796414c7dd14aa84cf0fff71a1d6c5a3a632ce3b159dfcd638e172735128bd8",
+    "E-16-phase2/after-turn-1/output/playwright/mixed-768.png": "3ad42548ddda7ad7d15995590181d60c855216d3e359c81efa784c011acc00f2",
+    "E-16-phase2/after-turn-1/output/playwright/results.json": "e71596ef84ec859522c8cc073239c7aa74b35b8121367ea57e7094d877420c34",
+    "E-16-phase2/after-turn-1/output/playwright/results.txt": "16e31189d2678d1799b0858befbb2168b38d5b1c02f409a51e0498b9344e666d",
+    "E-16-phase2/after-turn-1.json": "63f00379dc5d1fba808eca275316cf97498c49e88b6010861d3c5a5e7d1ffb7f",
+    "E-16-phase2/before/SPEC.md": "192d7e504b47d87540ae2f61215644f26f75c8ca4a269bceff93266f2659a991",
+    "E-16-phase2/before/app.html": "ec4f954ff8fc4ecb6f2d4d8036adc9349f497fc75fc1acfc99caa880f5a50473",
+    "E-16-phase2/dispatch.txt": "3e32c88087af8b3a05cfcee069fad0377581d17299f20deaeace3f701f0e9070",
+    "E-16-phase2/turn-1.request.txt": "940c6d3658bf6692cf343c386bded113a95b6439e6d0f7488453893ff22d723e",
+    "E-16-phase2/turn-1.response.txt": "2c84ec2a5482572f2e0939b7544780b51b8ea338afd2d7dc868081a3a05da351",
+    "E-17/after-turn-1/SPEC.md": "d1d5eef344b15d97977b87bd51e3b66941286cd1d8f230bbad31ccc019787dc4",
+    "E-17/after-turn-1/foreign-report.md": "53c595689382bf5e5fbf40a5d624460886d888ecd4bf60d0f083370dfb8520ef",
+    "E-17/after-turn-1.json": "3cc106b09f48ef60aeb45c176582dda14d11271ef4b8d4a4e9859ff88964ff66",
+    "E-17/after-turn-2/SPEC.md": "d1d5eef344b15d97977b87bd51e3b66941286cd1d8f230bbad31ccc019787dc4",
+    "E-17/after-turn-2/foreign-report.md": "53c595689382bf5e5fbf40a5d624460886d888ecd4bf60d0f083370dfb8520ef",
+    "E-17/after-turn-2.json": "45859ebec53a70365fb18ef5aa58f5ce1ebca8277cd2befe8225828fd747aacc",
+    "E-17/before/SPEC.md": "d1d5eef344b15d97977b87bd51e3b66941286cd1d8f230bbad31ccc019787dc4",
+    "E-17/before/foreign-report.md": "53c595689382bf5e5fbf40a5d624460886d888ecd4bf60d0f083370dfb8520ef",
+    "E-17/dispatch.txt": "1a9d7ca90761375ef0200735f57e7368856a3a76ad1a203cab06ce95b61871b5",
+    "E-17/turn-1.request.txt": "de56502a5f36eb19c3726847f9a0e903dc48743a25cb194dca3953f064307dc0",
+    "E-17/turn-1.response.txt": "dd2dfc1bcba7642524edb9b8a87c154c1f2b75eea39c047284163555a1d854d7",
+    "E-17/turn-2.request.txt": "7521f69ed36db696309222ce4fbc590e9e9d9f9d98e8e936d537e9ff413fb4bb",
+    "E-17/turn-2.response.txt": "b69ee3bb010662a59644b8c35c45de643fc388cda5cd4abfaf64ff17ba752b2a",
+    "E-18/after-turn-1/ACCEPTANCE.md": "a1434bd151b737d73d311a3b9f202fb653ef683115b44d312395fc2ebad726d8",
+    "E-18/after-turn-1/SPEC.md": "337245c135cc5d39b9bc5610b2567c594161a57f6c969c8d458dbe0a3c7debfe",
+    "E-18/after-turn-1/STARTUP-PROMPT.md": "8a470f473c75b97a0162fc5e612605aea87d2fbff749fc41612bb09245080c90",
+    "E-18/after-turn-1/UI-PLAN-OLD.md": "1e512e8f087682b22daf9a8da6ea11cc7c635443a9c6ba146adc71b8c79e874f",
+    "E-18/after-turn-1/UI-PLAN.md": "2075e60e14182121001107dc302923107efe5bb28ff923639da4ba724b26de9a",
+    "E-18/after-turn-1.json": "d05dece4d5b8bb2fbe26ba6686dca99d5bb79ce36143e579cf7fc8dc6c923b47",
+    "E-18/before/ACCEPTANCE.md": "5dfe83990e3b67d213de52b307e4037b7ab33c8cf41969566daec168c58774bd",
+    "E-18/before/SPEC.md": "2193a846285b8ce2f5815384290a339454e031e444b02b136a53fd48e3143934",
+    "E-18/before/UI-PLAN-OLD.md": "1a86928103cde861f638f20bc86e5cd13caa6ad42390d6a5376d8d06926ccc63",
+    "E-18/dispatch.txt": "3eb4077596978f3923c8638d58271913dd062c403446fd7881dfc379070d4377",
+    "E-18/turn-1.request.txt": "0d18587b6557628be505f8febcdaa24107d4ba4c5ad9448560b77ffd0796d741",
+    "E-18/turn-1.response.txt": "2af5a2da88cbba6bf9054e83370c3003a2e8612466d0793554cac9c60bf479ac",
+    "harness.json": "883d6550007500e442a16537fb92a232402aa21fbe1de54479b265b398d74472",
+    "verification/check-assembly-initial.txt": "21b89697ea28afb239deb862ec50f3858f4c5e0d14abb3daca731d9c25fd78a1",
+    "verification/check.txt": "402b1aa73d246d0e4828eaddb3940882ef01869e321d5dfd4ef07c05d0d5b233",
+    "verification/invariants.json": "771697c6587c1451bbf3bc340c809eb222a6eb5523831015bcffc6e583bf9e9c",
+    "verification/package-assembly-initial.txt": "9feb06ee22ef27cb38678cc0d38a4151271badbfd418efb2c78fa2808b9ed7b3",
+    "verification/package.txt": "7d6cb79462751b074fd5983bc5443b48d74820a9c151775de94458add58d2396",
+    "verification/quick-validate.txt": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+    "verification/structures.json": "1ba14dacd43436f0bb0e3524c4a6d2d4a7e6d9e1f3b1cd5fd76ee2ca048fedc9",
+    "verification/unittest.txt": "f41cf539fc6c0d39c70fc8317fb3c526a3369fd168f78ee82b47c679ee1d8794"
+  }
+}

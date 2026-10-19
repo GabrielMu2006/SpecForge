@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-10-17T12:11:38.493441+00:00",
+  "case": "E-05",
+  "label": "after-turn-1",
+  "files": {
+    "SPEC.md": {
+      "sha256": "f3a0cb8d866c5485ba482be690e89d46129c6d9131b4cf1e5b915e24be19f4f7",
+      "size": 4435
+    }
+  }
+}

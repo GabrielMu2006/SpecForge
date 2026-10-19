@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-17",
+  "runtime_version": "0.2.0",
+  "source_commit": "0120f132dc88a9d424408072393b67bc94646258",
+  "host": "Codex desktop collaboration subagents",
+  "model": "not independently established",
+  "workspace_root": "/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n",
+  "runtime_sha256": {
+    "LICENSE": "42d98b0ff1e06721df475f5695e040279f7b33fcc89499bfce313cc57e9e0e84",
+    "SKILL.md": "32da5e26181d4292732619d883e8f7b1b52a63c729a87e56900e9f6b2bc3b782",
+    "references/specification.md": "090d528e895a45be24bbcf88c89f4ff23a20798536cad2c0e5ba5b53f606241f",
+    "references/interview.md": "c0cd8275937395bba587ab162918c8ad743fa88b37a18956e0d3d103ee92db46",
+    "references/revisions.md": "86d8a029a31f6e87dce4027237317b527563249ba9fde00df39668a59a1dff3c",
+    "agents/openai.yaml": "48e319b068f0c8a432e7b9c4383272070513795a5dcfea063f91d97807d260b5",
+    "assets/SPEC.template.md": "35f068b83d7317cf8a65c5c0f14d107e0694ed1a0d16fce6c126c016ec592bd3"
+  },
+  "independent_session_count": 17,
+  "actual_user_assistant_turn_count": 22,
+  "native_question_cards_used": false,
+  "tool_constraints": "prompt-enforced, tools not physically removed",
+  "routing": "supplied catalog entry; native selector trace not retained",
+  "response_provenance": "actual collaboration final responses copied verbatim; terminal newline normalized",
+  "full_native_tool_trace": false,
+  "agent_turn_mapping": {
+    "E-01": [
+      "reg_e01",
+      "reg_e01"
+    ],
+    "E-03": [
+      "reg_e03"
+    ],
+    "E-04": [
+      "reg_e04",
+      "reg_e04"
+    ],
+    "E-05": [
+      "reg_e05"
+    ],
+    "E-06": [
+      "reg_e06"
+    ],
+    "E-07": [
+      "reg_e07"
+    ],
+    "E-08": [
+      "reg_e08"
+    ],
+    "E-09": [
+      "reg_e09",
+      "reg_e09",
+      "reg_e09_resume"
+    ],
+    "E-10": [
+      "reg_e10"
+    ],
+    "E-12": [
+      "reg_e12"
+    ],
+    "E-13": [
+      "reg_e13",
+      "reg_e13"
+    ],
+    "E-15": [
+      "reg_e15",
+      "reg_e15_resume"
+    ],
+    "E-16-phase2": [
+      "reg_e16_phase2"
+    ],
+    "E-17": [
+      "reg_e17",
+      "reg_e17"
+    ],
+    "E-18": [
+      "reg_e18"
+    ]
+  }
+}

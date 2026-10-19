@@ -1,0 +1,6 @@
+Independent software-assistance session. Work only in /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-18; read only its input files and relevant skill resources. Do not read evaluation criteria, other workspaces, or SpecForge repository files. Do not modify installed skills, write to external applications, or create real scheduled automations. This is a text-turn harness: ask user questions in your normal response, not via live user-input tools; actual answers may arrive as later messages. Return your actual user-facing response, with any created/changed files. Do not judge yourself against a rubric.
+
+Use $specforge at /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/skill/specforge/SKILL.md. Read its relevant supporting resources normally.
+
+User request:
+把界面定为暖纸色索引档案，固定显示原文与审核动作，替换旧深色方案。请写详细方案和启动 prompt，只改文档。概念稿上的 2030 日期与 0.99 评分只是画面示意。

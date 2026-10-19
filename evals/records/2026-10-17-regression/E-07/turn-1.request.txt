@@ -1,0 +1,394 @@
+Independent software-assistance session. Work only in /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-07; read only its input files and relevant skill resources. Do not read evaluation criteria, other workspaces, or SpecForge repository files. Do not modify installed skills, write to external applications, or create real scheduled automations. This is a text-turn harness: ask user questions in your normal response, not via live user-input tools; actual answers may arrive as later messages. Return your actual user-facing response, with any created/changed files. Do not judge yourself against a rubric.
+
+Use $specforge at /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/skill/specforge/SKILL.md. Read its relevant supporting resources normally.
+
+Environment constraint: after loading this harness and the supplied skill resources, the user task must be completed as a text-only response. No filesystem reads/writes, shell commands, browser, or other tools for the user task. This simulates absence of file tools; the harness bootstrap is separate.
+
+--- Supplied skill resource: LICENSE ---
+MIT License
+
+Copyright (c) 2026 GabrielMu2006
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+--- Supplied skill resource: SKILL.md ---
+---
+name: specforge
+description: "Turn a rough software idea into an actionable SPEC.md through staged product discovery, or revise an existing spec when requirements change. Use for clarifying users, V1 scope, flows, business rules, acceptance criteria, roadmap, and implementation tasks before coding."
+license: MIT
+metadata:
+  version: "0.2.0"
+---
+
+# SpecForge
+
+Help a nontechnical person define a software product well enough for a coding agent to begin. Act as a thoughtful product partner: expose consequential gaps, explain tradeoffs, and suggest a smaller coherent first release. Work in the user's language; keep stable filenames and IDs across languages.
+
+## Start with the actual request
+
+- For a new idea, summarize the intended outcome in one or two sentences, use what the user already supplied, and begin the earliest unresolved stage below.
+- For an existing spec or a resumed session, read the relevant document and linked task file first. Preserve its useful structure and decisions. Load [the revision guide](references/revisions.md) when changing it.
+- If several projects or specs could be the target, ask which one; do not merge unrelated scopes. Do not read unrelated personal files.
+- Planning is this skill's deliverable. Do not start implementation, create remote issues, install dependencies, or publish the user's project merely because a task list exists. An explicit request for those actions is separate authorization; this skill does not cancel it.
+- Carry the current assignment forward: discovery, specification revision, or an executable plan. Feedback on a prototype does not expand a planning-only assignment into code changes. A later explicit implementation request changes that assignment without requiring another approval.
+- Do not force discovery onto a sufficiently specified coding request, a small bug fix, or a simple document edit. If explicitly invoked for a narrow change, keep the work narrow.
+
+## Conversation contract
+
+1. Ask **at most three substantive questions per question batch** before waiting for answers. Prioritize decisions that change the core promise, V1, or costly/irreversible behavior. Ask fewer when sufficient, and none when ready to deliver. Do not hide a questionnaire inside one numbered question. The user's requested cadence overrides this default.
+2. Use plain language and concrete examples. Offer two or three distinct options when useful, with a recommendation and a short reason; allow free text. Do not make a beginner choose databases or frameworks to answer a product question.
+3. Stay within the current stage unless a later issue invalidates an earlier choice. Skip answered questions. Track partial or delayed replies against the pending batch; retain unanswered core decisions even when a reply adds a different feature. Stop dependent work until answers arrive. Ending an execution or reaching a timeout is not an answer; save a resumable checkpoint rather than resending or silently deciding.
+4. At a stage boundary, briefly recap **decided / assumed / still open**, explain the next step, and continue. A recap is not a mandatory approval gate. Ask about core value or V1 boundaries only when actually unresolved; earlier explicit decisions remain valid.
+5. Challenge a questionable request with its concrete consequence and a practical alternative. Preserve the user's final choice. Do not silently add accounts, payments, dashboards, analytics, AI features, or integrations.
+6. When the user says “you decide,” recommend a default with a reason. Record a reversible detail as an assumption and continue. Seek a clear choice for unresolved core value or V1 scope unless the user has explicitly delegated that decision. Silence is not confirmation.
+7. Scale detail to the project. A one-command script does not need pages, onboarding, personas, or a multi-quarter roadmap. V2 may be “not committed; revisit after V1 feedback.”
+
+## Discovery stages
+
+Load [the interview guide](references/interview.md) when selecting questions or adapting to a project type. Treat stages as coverage goals, not a fixed questionnaire or fixed number of rounds.
+
+| Stage | Establish | Move on when |
+| --- | --- | --- |
+| 1. Problem and people | Primary user, situation, pain, desired outcome, current workaround | The core promise has a representative success example and a failure boundary |
+| 2. First useful release | A coherent V1, constraints, explicit exclusions, possible V2 | The user has chosen the important scope tradeoffs |
+| 3. Behavior | Main journey, surfaces/experience where applicable, interacting rules, data ownership, failures | Another person can describe a complete journey and its consequential state changes |
+| 4. Handoff | Observable acceptance, dependencies, tasks, roadmap, open decisions | The readiness check below passes or a clearly marked draft is requested |
+
+## Evidence and uncertainty
+
+Keep user decisions, design assumptions, and external facts distinct. A user's agreement selects a product direction; it does not prove demand or a third-party capability.
+
+- Research only facts that materially affect scope or feasibility, plus research the user requests. Prefer primary sources for capabilities, availability, restrictions, and costs. Record a source link, access date, what it establishes, and any inference separately.
+- Use the host's available research tools without requiring a particular vendor or connector. If tools are unavailable, fail, or sources conflict, mark the claim **unverified** and describe its effect. Never imply research or an integration test happened when it did not.
+- Do not turn planning into mandatory competitive research. Avoid sending private project text in search queries when a generic factual query suffices.
+- A **blocking** unknown could change the primary user, V1 promise, essential workflow, access/ownership rules, or feasibility. Ask about it or define a validation task that blocks dependent implementation.
+- For a quality-dependent core promise, define representative inputs, useful results, misleading results, and how quality will be evaluated before treating validation as routine tuning. A specification need not implement a model or prove ordinary engineering details; unresolved evidence that could invalidate V1 remains a blocker, with validation work explicitly allowed.
+- A **nonblocking** assumption has a stated provisional choice, rationale, and a way to revisit it. Continue without making it look confirmed.
+
+## Write the specification
+
+Read [the writing guide](references/specification.md) when drafting or checking the handoff. Use [the SPEC template](assets/SPEC.template.md) as an adaptable starting point, not mandatory boilerplate. Replace its prompts with project-specific content and omit inapplicable sections.
+
+- Default to one `SPEC.md` containing the roadmap and task list. Split only when the task list or another section has become unwieldy or the user requests it. Keep `SPEC.md` as the entrypoint, link the authoritative file, and remove duplicate copies of the same content.
+- Save to the user-selected project or path. If a workspace is clearly associated with the project, use it; ask only when ambiguous. Read existing content before editing. Without file tools, provide the complete Markdown in chat and say it has not been saved.
+- During a long interview, keep a compact checkpoint in a draft `SPEC.md` when file tools and a clear destination are available: stage, decisions, assumptions, blocking questions, and next step. Resume from that checkpoint; do not restart the interview. Keep the original current spec intact when unresolved proposed changes conflict with it.
+- Define requirements and tasks by observable outcomes, with stable IDs such as `R-001` and `T-001`. Each V1 requirement needs acceptance criteria and task coverage. Each task needs a goal, related requirement IDs, dependencies, and a verifiable completion condition.
+- For an interface product, describe the key scenes, primary actions, information hierarchy, and chosen or open visual direction. Put unresolved design/prototype work before dependent interface production; omit this for tools without a UI. Check consequential combinations of features, not just each feature alone.
+- Specify product data concepts and who may see/change them. Leave frameworks, storage engines, endpoint shapes, filenames, and function signatures to the coding agent unless the user provided a constraint or a researched feasibility dependency requires one.
+- Do not invent delivery dates, validated market demand, performance measurements, implementation progress, or user confirmation. Mark numerical targets as proposed or chosen targets with provenance.
+- Keep a critical target's definition, dataset, adoption basis, and proposed/adopted status attached to its requirements, tasks, and any handoff prompt; measured values are separate. When requested, use the writing guide's executable-handoff format and preserve the actual authorization and authoritative document versions.
+
+## Readiness and delivery
+
+A handoff is **Ready for implementation** only when:
+
+- the primary user, core value, coherent V1, and exclusions are settled;
+- the essential journey, rules, important failures, and relevant access/data behavior are unambiguous;
+- the core promise has concrete success/failure examples and an evaluation method; relevant experience decisions are stated or assigned to explicit prerequisite design work;
+- every V1 requirement has observable acceptance and at least one covering task;
+- task dependencies resolve without cycles, V2 work is outside the V1 backlog, and no unresolved contradiction or blocking assumption remains.
+
+Unverified nonblocking assumptions may remain, visibly labeled. “Ready” describes the specification, not a tested product or proven market. Otherwise label the document **Draft**, identify the affected requirements/dependencies, and name the validation or independent tasks that can proceed and the work still blocked. Requirement/task coverage alone is insufficient for readiness.
+
+When enough is known, stop asking and deliver. If the user requests an early draft or stops the interview, provide the best available draft and preserve unknowns rather than prolonging discovery. Close with the saved file or full Markdown, the main scope choice, any blockers, and the next useful action. Do not imply that generating the spec authorizes coding.
+
+
+--- Supplied skill resource: agents/openai.yaml ---
+interface:
+  display_name: "SpecForge"
+  short_description: "Turn rough ideas into build-ready product specs"
+  default_prompt: "Use $specforge to clarify my idea and create an actionable SPEC.md."
+
+
+--- Supplied skill resource: assets/SPEC.template.md ---
+# {{Project name}}
+
+<!-- Adapt this template to the project's type and the user's language. Replace prompts with actual content; omit irrelevant sections and remove these comments. Do not leave template placeholders in a delivered spec. -->
+
+Status: {{Draft | Ready for implementation}}
+Updated: {{date}}
+Current stage / next step: {{discovery stage or handoff}}
+Current assignment: {{discovery, specification revision, or executable plan; operations actually authorized}}
+
+## Product and users
+
+{{Positioning, primary user, concrete situation, pain/current workaround, and desired outcome. Distinguish intended value from evidence of demand.}}
+
+Core promise: {{Representative input/situation → useful result; counterexample or failure boundary. Explain how a quality-dependent promise will be evaluated and which uncertainty could invalidate V1.}}
+
+## Scope
+
+### V1
+
+{{The first complete useful outcome and chosen boundaries.}}
+
+### Not in V1
+
+{{Explicit exclusions.}}
+
+### Possible V2
+
+{{Deferred ideas and conditions for revisiting them, or state that no V2 is committed.}}
+
+## Surfaces and journeys
+
+{{Relevant pages, commands, triggers, or interaction surfaces; main journey and important empty/error cases.}}
+
+{{For interface products only: primary actions, information hierarchy, chosen/open visual direction, required assets, device/window limits, and prerequisite design work. For games, include a concrete decision/cost/result/next-decision cycle.}}
+
+{{For consequential combinations: current state + action → resulting state, cost, retained/lost work, feedback. Link end-to-end scenarios to requirements/tasks.}}
+
+## Requirements and acceptance
+
+### R-001 — {{Observable outcome}}
+
+{{User need, behavior, business rules, acceptance scenarios, and relevant dependencies. Repeat for each requirement.}}
+
+## Data and access
+
+{{Product data concepts, ownership, visibility, changes, and deletion/revocation where relevant. Keep implementation choices open unless constrained.}}
+
+## Constraints and quality
+
+{{User-supplied limits and observable quality expectations relevant to this project. Label proposed targets.}}
+
+{{For critical targets: definition/counting method, dataset/source, proposed or adopted status and its basis, related IDs. Record measurements/evidence separately; distinguish development from acceptance material.}}
+
+## Roadmap
+
+{{Outcome-based milestones and exit conditions; dates only if supplied or justified.}}
+
+## Task list
+
+| ID | Goal | Requirements | Depends on | Done when | Status |
+| --- | --- | --- | --- | --- | --- |
+| T-001 | {{Outcome}} | R-001 | None | {{Observable completion}} | Planned |
+
+## Decisions, assumptions, and open questions
+
+{{Separate chosen decisions from provisional assumptions. Give each assumption its rationale, impact, revisit/validation step, and blocking status. Record who/what established decisions.}}
+
+{{List unresolved blockers explicitly, or state there are none. For sourced claims, record source links and access dates, with inferences separate.}}
+
+{{For a pause: pending question batch, partial answers, and next unresolved decision. For an unresolved revision: preserve the baseline and label the pending change with affected IDs.}}
+
+## Handoff
+
+{{Readiness result, remaining blockers, and the next useful action. Ready describes the spec, not tested software. Record substantive revisions here when updating an existing spec.}}
+
+{{Name work allowed before validation and blocked dependent tasks. If multiple files exist, index their roles and active revisions; link superseded plans. When requested, provide an executable startup prompt preserving actual scope, authorization, dependencies, artifacts, evidence, and target adoption states.}}
+
+
+--- Supplied skill resource: references/interview.md ---
+# Interview guide
+
+Read this when deciding what to ask next. Select questions that change a decision; do not present this guide as a questionnaire.
+
+## 1. Problem and people
+
+Discover the person, situation, and outcome before the feature list. Distinguish a user from a buyer only when that difference matters. Ask about the current workaround rather than demanding market-size estimates from a beginner.
+
+Anchor discovery in one core promise: given a realistic input or situation, what useful result must the product produce, and what superficially plausible result would be wrong? Keep this visible when the user adds import formats, integrations, or convenience features. A document organizer, for example, must distinguish shared words, belonging to one project, and a genuine revision relationship; supporting more file types does not establish that distinction.
+
+For “a site where friends share timetables and find free time,” a useful opening is:
+
+1. “Who is the first version mainly for: classmates at one school, or friends across different schools?”
+2. “Is the main goal to browse friends' timetables, or quickly find a time when everyone is free? I recommend choosing one as the main action.”
+3. “How do you coordinate this today: messages, screenshots, or a shared calendar?”
+
+Do not start by asking about login providers, databases, deployment, or every future feature.
+
+## 2. First useful release
+
+Describe one end-to-end outcome and identify the smallest release that delivers it. “Smallest” must still respect the user's chosen core promise. A read-only mockup is not a working collaboration product.
+
+For each tempting addition, explain who benefits, what burden it adds, and whether the V1 promise fails without it. Suggest deferral, then preserve the user's choice. Confirm the meaningful boundary, not every minor detail.
+
+Useful decisions include who can participate, how information enters the product, whether collaboration is essential, and which constraints actually matter. A hard deadline or budget changes scope; do not invent either.
+
+Example challenge: “Importing school timetables could save effort, but we have not verified access to the school's system. Manual entry would make a smaller first version possible. Would manual entry still meet your first-release goal?”
+
+Manual entry becomes V1 only after the user's choice or explicit delegation; an unverified integration cannot quietly become a promised feature.
+
+## 3. Behavior, adapted to the product
+
+| Project | Clarify the relevant surfaces and behavior |
+| --- | --- |
+| Web or mobile app | Entry point, screens, navigation, empty/loading/error states, ownership, collaboration, offline behavior if needed |
+| Management or narrative game | A complete decision cycle, resource tradeoffs, consequences, character/history feedback, key scenes and information density; use a concrete turn or episode |
+| Script or command-line tool | Inputs, invocation, outputs, invalid input, overwrite behavior, repeat runs, partial failure; no invented pages |
+| Automation | Trigger, schedule/time zone if relevant, connected accounts, duplicate runs, retry/stop behavior, failure visibility |
+| Plugin or extension | Host application, invocation, context access, permissions, output, unsupported host states |
+| Agent skill | Trigger, inputs, conversation contract, tool availability, artifacts, handoff, resumption, boundaries |
+
+Trace one realistic journey from start to outcome. Then examine the failures that would change product behavior: missing inputs, denied access, no results, stale data, incompatible data, or a failed dependency. Do not enumerate irrelevant edge cases.
+
+For interfaces, establish the primary action and most important information in each key scene, a suitable visual direction, necessary assets, and relevant device/window limits. Record delegated suggestions as assumptions. If visual decisions remain open, define the design/prototype task that precedes dependent production; do not automatically demand concept images or a separate approval. A script does not acquire this work.
+
+Examine costly intersections: publishing while an investigation is running, navigating away with an unsaved plan, undoing a queued action, or deleting a project containing shared material. Establish the resulting state, cost, retained/lost work, and feedback. A feature list cannot settle these interactions.
+
+Describe data with familiar nouns (person, timetable, group, invitation), relationships, and visibility. A business rule such as “leaving a group immediately removes access to its shared availability” is a product decision, not a database choice.
+
+## 4. Handoff
+
+Turn “easy,” “fast,” and “smart” into observable outcomes without inventing measurements. For example: “When no common slot exists, say so and let the person change the date or duration; do not invent a suggestion that overlaps a busy period.”
+
+Prioritize tasks by dependencies and useful outcomes. Do not force dates or numerical estimates. Keep a research/validation task separate when its result decides whether implementation should proceed.
+
+## Pace and recovery
+
+- Three unanswered questions are enough for one turn; avoid extra questions in the introduction or conclusion.
+- Select the highest-impact unknowns first. Recommend defaults for reversible details within the user's delegation; do not ask three questions merely to fill a batch or impose a fixed total number of rounds.
+- If a user only answers one, incorporate that answer and ask only what still matters.
+- With asynchronous answers, retain the batch's pending items and merge each actual answer. Do not repeat a still-visible question while waiting, interpret a preselection/timeout as submission, or proceed with dependent decisions. If execution ends, preserve the pending items and next step for resumption; a request to repeat a question should repeat only the unresolved items.
+- “I don't know” calls for a recommendation, not the same question in more technical language.
+- At a stage boundary, use a short recap: “We have chosen X. Y is a provisional assumption. Z remains open. Next we will describe the main journey.”
+- A well-specified brief can skip stages. A changed primary user may reopen stage 1. Do not restart unaffected stages.
+- A pause checkpoint should state the next unresolved decision so another session can continue without the full chat history.
+
+
+--- Supplied skill resource: references/revisions.md ---
+# Revising or resuming an existing specification
+
+Read when the user supplies an existing spec or requests a change to one.
+
+1. **Recover the baseline.** Read `SPEC.md`, its authoritative linked files, active plan/revision, current assignment and authorization, status, pending decisions, and the user's change request. Reuse the existing IDs, accepted terminology, and unaffected content. Do not assume that a polished document was implemented. If supplied material describes another project, resolve the mismatch before editing; a withdrawn mistaken message does not enter the baseline.
+2. **Explain the effect.** Identify which users, V1 boundaries, journeys, requirements, data/visibility rules, acceptance criteria, roadmap milestones, and tasks the request touches. State material tradeoffs plainly. A cosmetic change need not reopen discovery.
+3. **Ask only consequential questions.** Use at most three per turn. A direct instruction that clearly changes scope is already a decision; do not seek the same permission again. Ask when its consequences leave a core choice ambiguous. Do not reinterpret an ambiguous idea as an approved scope change.
+4. **Apply a coherent revision.** Update the affected content and cross-references together. Preserve stable IDs; allocate new IDs for new items. Mark a referenced removed requirement/task as removed or superseded with a reason instead of reusing its ID. Remove stale acceptance and dependencies. Keep V2 ideas outside V1 unless moved explicitly.
+5. **Recheck status.** Reevaluate the readiness conditions in `SKILL.md`. A new unresolved V1 dependency makes the proposed revision Draft. Preserve completed-task evidence; if the definition of done changes, flag that task for revalidation and explain why.
+6. **Summarize the delta.** Record a concise change note: what changed, why, affected IDs, unresolved choices, and the next step. Mention the files actually saved. A change note describes decisions, not fictional approval or implementation history.
+
+When a new plan replaces an old one, update the entrypoint's active-document index and label/link the superseded plan. Reconcile the current status and affected acceptance/task text, not just a final appended note. Preserve old evidence as history and distinguish a new definition of done from a previously completed one.
+
+Propagate a critical target's proposed/adopted status, counting method, dataset, and adoption basis into the revised tasks and any startup prompt. Copying a proposed percentage out of an assumption does not turn it into a formal release gate. Preserve the baseline and rationale when the metric or evaluation material changes.
+
+## Pending proposals and checkpoints
+
+If a proposed change is unresolved, keep the current baseline requirements intact and record a clearly labeled **Pending change** with its affected IDs and unanswered decision. Distinguish the baseline's status from the proposed revision's status. Do not blend two incompatible versions into one current spec.
+
+For a first-time interview with no baseline, save a Draft checkpoint at the known output path when useful. It should contain the current assignment/authorized work, stage, decisions made, provisional assumptions, blockers and affected task IDs, pending question batch with partial answers, active files, and next step. On resumption, merge late answers and start at the earliest unresolved stage without repeating settled questions or choosing unanswered items.
+
+A complaint about a prototype during a planning-only assignment remains feedback for that assignment; it does not itself authorize source changes. A later clear implementation request updates the assignment and should proceed within the existing authorization. Do not turn this distinction into a routine confirmation step.
+
+If the user requests an early handoff, output a Draft with the blockers rather than requiring more conversation. If file tools are unavailable, return revised Markdown or a precise patch and disclose that no file was changed.
+
+
+--- Supplied skill resource: references/specification.md ---
+# Specification and task guide
+
+Read when drafting or reviewing a handoff. The output serves both a nontechnical owner and a coding agent. Match the user's language; retain stable IDs and filenames.
+
+## Content that earns its place
+
+Use the [template](../assets/SPEC.template.md) as a starting point. Include positioning, primary user and situation, core needs, chosen V1, exclusions, possible V2, relevant surfaces, essential flows, rules, data needs, acceptance, roadmap, tasks, and uncertainty. Combine short sections when clearer. Do not manufacture pages for a script or a V2 promise for a tiny tool.
+
+Keep technical constraints the user actually supplied. Explain why any additional technical decision affects the product before including it. Product entities and access rules are useful; an invented SQL schema is unnecessary.
+
+## Core promise and experience
+
+Describe a representative input/situation, the useful outcome, and a counterexample or failure boundary for the core promise. For a quality-dependent capability such as semantic grouping, explain how representative material and judgments will establish usefulness; a single easy match is not enough to settle the core promise. Identify validation tasks and blocked dependents when missing evidence could invalidate V1. Ordinary implementation and performance tuning need not be completed during discovery.
+
+For an interface product, describe key scenes, the primary action and information hierarchy, important states, chosen/provisional visual direction, needed assets, and relevant window/device constraints. Describe behavior rather than only adjectives such as “modern” or “game-like.” A management game should include a concrete cycle of decision, cost, result, explanation, and next decision. Open design choices can become prerequisite design/prototype tasks; do not manufacture images, approval gates, or a UI for a command-line tool.
+
+## Requirements
+
+A useful requirement contains:
+
+- a stable ID and user-visible outcome;
+- the rule that determines success, including important invalid or empty cases;
+- observable acceptance criteria;
+- its release/scope status and any provisional dependency.
+
+Example:
+
+**R-003 — Find a shared free slot (V1).** A group member selects a date, participants, and a minimum duration. Results contain only intervals inside the chosen search window when every selected participant is available.
+
+Acceptance: if one selected participant has not supplied availability, identify that person and do not present the incomplete result as everyone's free time. If no interval is long enough, show an empty result and allow changing the inputs. The duration, time-zone, and interval-boundary rules must be settled elsewhere in the spec.
+
+Avoid “works correctly” and “has a good UX.” If a target is a recommendation rather than a user's decision or measured fact, say so.
+
+For consequential combinations, record **current state + action → resulting state, cost, retained/lost work, feedback**. For example, decide whether publishing ends or continues an ongoing investigation and how any lost budget is shown. Check that a preview and its final operation use the same product rules, and that navigating or undoing does not silently discard work. Link a few end-to-end scenarios to requirements/tasks rather than enumerating every possible combination. Distinguish an undefined rule from an implementation that violates an already-defined rule.
+
+## Tasks
+
+Use a table for a short backlog; use task blocks when acceptance needs more explanation:
+
+```markdown
+### T-003 — Find common availability
+- Goal: Let a group member find a time when all selected participants are available.
+- Requirements: R-003
+- Depends on: T-001, T-002
+- Done when: The accepted scenarios in R-003 pass, including missing availability and no common slot.
+- Status: Planned
+```
+
+Prefer end-to-end outcomes to premature file/function instructions. Dependencies must identify existing tasks, form an acyclic order, and not point to deferred V2 features. Every V1 requirement must be covered; every task must support a requirement or a stated enabling/validation need. Avoid both untestably large tasks and line-by-line implementation choreography.
+
+Task status defaults to Planned. An implementation request, generated code, or completed spec does not itself prove a task is done. Preserve existing completion evidence when revising a backlog; flag changed acceptance for revalidation instead of silently declaring it still complete.
+
+Use explicit dependency IDs rather than abbreviated ranges in new task tables. IDs remain stable when prerequisites are added later; graph order is determined by dependencies, not numeric ID order. For the optional repository maintainer linter, canonical statuses are Planned, In progress, Blocked, Complete, Needs revalidation, Removed, or Superseded (and the documented Chinese equivalents). Other host formats remain usable; structural lint cannot establish prose quality or lifecycle correctness.
+
+## Uncertainty and provenance
+
+Keep three concepts separate:
+
+| Kind | Record |
+| --- | --- |
+| Product decision | Chosen behavior, who/what selected it, rationale when relevant |
+| Assumption | Provisional choice, rationale, impact if false, validation or revisit condition, blocking or nonblocking |
+| External evidence | Exact factual claim, source URL or supplied artifact, access date, what remains unverified |
+
+Do not label a suggested choice “confirmed” because it appeared in an assistant recap. Do not treat the user's anecdote as market validation. An existing spec is the recorded baseline, not evidence that its assumptions or implementation have been verified.
+
+Write blockers as concrete decisions, not “TBD.” For an essential unknown integration, explain the requirement it blocks and create a validation task if useful. The whole handoff stays Draft while a V1 blocker remains, even if independent work can proceed.
+
+For a critical numeric target, record its definition/unit and counting method, dataset/source, proposed or adopted status, adoption basis (including an explicit delegation), and affected requirements/tasks. Keep measurements and their evidence separate from targets. Carry this status into task completion conditions and handoff prompts; mentioning a proposal there does not adopt it. Quality experiments distinguish development material from independent acceptance material. A metric or dataset change retains the old baseline and a reason; no mandatory reconfirmation is needed for a choice already authorized.
+
+## Roadmap and document structure
+
+Use milestones defined by outcomes and exit conditions. Do not assign delivery dates or effort estimates without a basis. Keep V2 ideas explicitly provisional and outside V1 acceptance and tasks.
+
+Default to one `SPEC.md`. If splitting is justified, give one authoritative home to each item: for example, `TASKS.md` owns tasks while `SPEC.md` owns product requirements and links to the task file. Retain requirement IDs in tasks, update both sides together, and do not leave an obsolete embedded backlog behind. Preserve existing filenames where practical.
+
+When several plans exist, keep a compact current-document index in the entrypoint: role, active revision/file, and what it replaces. Update current status at its authoritative location instead of leaving a contradictory old status above a new appendix. Historical measurements and completion evidence remain history, visibly dated.
+
+## Executable handoff, when requested
+
+Provide the entry documents and their authority, current assignment and already-authorized operations, core promise and scope/exclusions, task order with prerequisites, expected artifacts, validation steps/evidence, proposed versus adopted targets, and unresolved blockers with independent work that can continue. A short copyable startup prompt can summarize these and link to the authoritative plan; it must not create extra permissions or an approval gate. Preserve planning-only scope across feedback, and honor a later explicit implementation instruction without asking again. Do not invent a file list or command before checking an existing repository when those details matter.
+
+## Final consistency pass
+
+Check the actual content, not only the headings:
+
+1. Does each chosen feature serve the core outcome, and do exclusions agree with flows and acceptance?
+2. Can a coding agent execute the main journey without guessing a major business rule?
+3. Are ownership, visibility, deletion/revocation, and failure behaviors covered wherever they affect that journey?
+4. Are assumptions distinguishable from decisions, and do blocking facts have evidence or an explicit unresolved status?
+5. Does every V1 requirement have acceptance and task coverage, with valid dependencies and no V2 leakage?
+6. Do the status, linked files, and summary agree with unresolved issues?
+7. Do the core examples and evaluation method support the actual promise, and are important feature intersections settled?
+8. Are experience/design prerequisites and metric adoption states preserved in the task order and handoff?
+
+If a document has a blocker, deliver it as Draft rather than claiming completeness. Stop questioning once the core decisions are sufficient; preserve nonblocking uncertainties without turning them into extra rounds.
+
+
+User request:
+我想做一个 AI 帮学生选课的工具，今天不想继续回答了，先给我草稿。

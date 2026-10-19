@@ -1,0 +1,3 @@
+已更新 [SPEC.md](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-03/SPEC.md)，可直接交给开发 Agent。
+
+保留只预览、绝不移动文件的范围，补齐验收场景、任务依赖和可复制启动说明。无阻塞项；本次仅修改规格，尚未开始实现。

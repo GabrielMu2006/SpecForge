@@ -1,0 +1,6 @@
+已保留文件拆分并同步修改：
+
+- [SPEC.md](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-10/SPEC.md)：小组与共同空闲查询上限均为 6 人，更新 A-001。
+- [TASKS.md](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-10/TASKS.md)：验收改为第 6 人可加入、第 7 人被阻止，查询最多 6 人。
+
+已核对一致性，需求与任务 ID、依赖和状态保持不变。

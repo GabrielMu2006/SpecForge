@@ -1,0 +1,638 @@
+[
+  {
+    "name": "原有藏品保留且不添加虚构正式数据",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "缺失说明列表显示暂无说明",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "键盘进入查看入口且焦点可见",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "原藏品详情完整且缺失说明正确",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "键盘可到达返回入口且焦点可见",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "键盘返回恢复原入口焦点",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "1440px 混合文本排版",
+    "passed": true,
+    "evidence": {
+      "width": 1440,
+      "overflow": false,
+      "columns": 3,
+      "cards": [
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "1440px 详情保留完整标题说明",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "1440px 详情不横向溢出",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "768px 混合文本排版",
+    "passed": true,
+    "evidence": {
+      "width": 768,
+      "overflow": false,
+      "columns": 2,
+      "cards": [
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "768px 详情保留完整标题说明",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "768px 详情不横向溢出",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "375px 混合文本排版",
+    "passed": true,
+    "evidence": {
+      "width": 375,
+      "overflow": false,
+      "columns": 1,
+      "cards": [
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "375px 详情保留完整标题说明",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "375px 详情不横向溢出",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "浏览器后退恢复滚动位置与焦点",
+    "passed": true,
+    "evidence": {
+      "scrollBefore": 2803,
+      "scrollAfter": 2803
+    }
+  },
+  {
+    "name": "返回后内容顺序不变",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "浏览器前进重开同一藏品",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "1440px / 200% CSS 放大无横向溢出且入口可见",
+    "passed": true,
+    "evidence": {
+      "width": 1440,
+      "overflow": false,
+      "columns": 1,
+      "cards": [
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "1440px / 200% 放大可阅读详情并返回",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "1440px / 200% 返回恢复入口焦点",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "768px / 200% CSS 放大无横向溢出且入口可见",
+    "passed": true,
+    "evidence": {
+      "width": 768,
+      "overflow": false,
+      "columns": 1,
+      "cards": [
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "768px / 200% 放大可阅读详情并返回",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "768px / 200% 返回恢复入口焦点",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "375px / 200% CSS 放大无横向溢出且入口可见",
+    "passed": true,
+    "evidence": {
+      "width": 375,
+      "overflow": false,
+      "columns": 1,
+      "cards": [
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        },
+        {
+          "titleClamped": true,
+          "summaryClamped": true,
+          "clearAction": true,
+          "target": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "375px / 200% 放大可阅读详情并返回",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "375px / 200% 返回恢复入口焦点",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "直接打开详情仍可返回列表",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "无效藏品地址安全回到列表",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "1440px 空收藏无无效操作",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "375px 空收藏无无效操作",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "正式集合恢复为原有单件藏品",
+    "passed": true,
+    "evidence": ""
+  },
+  {
+    "name": "无 JavaScript 运行错误",
+    "passed": true,
+    "evidence": []
+  }
+]

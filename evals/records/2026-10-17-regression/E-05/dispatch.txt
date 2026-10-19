@@ -1,0 +1,1 @@
+Read /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/requests/E-05.txt and carry out that isolated user task. No evaluation criteria or expected response is supplied.

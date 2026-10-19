@@ -1,0 +1,9 @@
+Your draft has the main scope settled: a weekly Sunday-evening notification on your Mac reminding you to clean up manually. It must never delete files.
+
+Three details remain:
+
+1. Which folder should the reminder name?
+2. What exact time on Sunday evening should it arrive? Asia/Shanghai is still the proposed time zone.
+3. Which app or notification channel should deliver it on your Mac?
+
+Changed files: None. The saved `SPEC.md` already preserves these pending decisions.

@@ -1,0 +1,3 @@
+SpecForge 0.2.0: metadata and resources valid
+Local file links: 5 runtime, 134 repository
+Examples: 7 requirements, 9 tasks; coverage and dependency graphs valid

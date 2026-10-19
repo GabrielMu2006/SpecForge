@@ -1,0 +1,42 @@
+test_build_output_cannot_pollute_runtime (test_tools.BundleTests) ... ok
+test_failed_validation_preserves_existing_archive (test_tools.BundleTests) ... ok
+test_invalid_nested_metadata_is_a_validation_error (test_tools.BundleTests) ... ok
+test_invalid_ui_shape_is_a_validation_error (test_tools.BundleTests) ... ok
+test_license_mismatch (test_tools.BundleTests) ... ok
+test_missing_resource (test_tools.BundleTests) ... ok
+test_reproducible_archive_manifest_bytes_and_checksum (test_tools.BundleTests) ... ok
+test_runtime_symlinks_are_rejected (test_tools.BundleTests) ... ok
+test_unexpected_empty_directory (test_tools.BundleTests) ... ok
+test_unexpected_runtime_files_are_rejected (test_tools.BundleTests) ... ok
+test_broken_links_in_all_supported_forms (test_tools.LinkTests) ... ok
+test_encoded_boundary_escape (test_tools.LinkTests) ... ok
+test_full_collapsed_and_shortcut_reference_links (test_tools.LinkTests) ... ok
+test_inline_spaces_percent_encoding_parentheses_and_images (test_tools.LinkTests) ... ok
+test_remote_fragments_and_code_are_not_files (test_tools.LinkTests) ... ok
+test_symlink_boundary_escape (test_tools.LinkTests) ... ok
+test_bold_requirements_and_five_column_tasks (test_tools.SpecTests) ... ok
+test_chinese_status_and_dependency (test_tools.SpecTests) ... ok
+test_cli_success_and_clean_failure (test_tools.SpecTests) ... ok
+test_code_examples_do_not_define_ids_or_tasks (test_tools.SpecTests) ... ok
+test_cycles_and_self_dependency (test_tools.SpecTests) ... ok
+test_dependency_typos_and_residual_text_are_rejected (test_tools.SpecTests) ... ok
+test_duplicate_ids (test_tools.SpecTests) ... ok
+test_escaped_pipe_in_goal (test_tools.SpecTests) ... ok
+test_existing_teaching_examples (test_tools.SpecTests) ... ok
+test_explicit_blank_or_unknown_status_is_rejected (test_tools.SpecTests) ... ok
+test_forward_numbered_prerequisite_is_allowed (test_tools.SpecTests) ... ok
+test_malformed_bold_requirement_is_not_skipped (test_tools.SpecTests) ... ok
+test_missing_task_fields (test_tools.SpecTests) ... ok
+test_range_missing_middle_is_not_silently_skipped (test_tools.SpecTests) ... ok
+test_ranges_expand_middle_ids (test_tools.SpecTests) ... ok
+test_reversed_and_inconsistently_padded_ranges (test_tools.SpecTests) ... ok
+test_split_files_are_explicit (test_tools.SpecTests) ... ok
+test_task_blocks_with_explicit_goal (test_tools.SpecTests) ... ok
+test_task_id_and_row_shape (test_tools.SpecTests) ... ok
+test_uncovered_and_empty_documents (test_tools.SpecTests) ... ok
+test_unknown_requirement_and_dependency (test_tools.SpecTests) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.272s
+
+OK

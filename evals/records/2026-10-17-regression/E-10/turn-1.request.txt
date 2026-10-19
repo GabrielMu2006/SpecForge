@@ -1,0 +1,6 @@
+Independent software-assistance session. Work only in /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-10; read only its input files and relevant skill resources. Do not read evaluation criteria, other workspaces, or SpecForge repository files. Do not modify installed skills, write to external applications, or create real scheduled automations. This is a text-turn harness: ask user questions in your normal response, not via live user-input tools; actual answers may arrive as later messages. Return your actual user-facing response, with any created/changed files. Do not judge yourself against a rubric.
+
+Use $specforge at /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/skill/specforge/SKILL.md. Read its relevant supporting resources normally.
+
+User request:
+保持现有文件拆分，把 V1 的小组上限从 10 人改成 6 人。

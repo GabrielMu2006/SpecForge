@@ -1,0 +1,11 @@
+{
+  "snapshots_match": 22,
+  "responses_retained": 22,
+  "runtime_files_match_release": 7,
+  "E17_baseline_unchanged_after_both_turns": true,
+  "E09_fresh_resume_preserves_checkpoint": true,
+  "E16_real_prior_plan_used": true,
+  "E16_app_changed": true,
+  "E16_browser_checks_passed": 33,
+  "E16_raw_output_matches_results_json": true
+}

@@ -1,0 +1,5 @@
+SpecForge 0.2.0: metadata and resources valid
+Local file links: 5 runtime, 134 repository
+Examples: 7 requirements, 9 tasks; coverage and dependency graphs valid
+Built specforge-0.2.0.zip: 7 files, 17005 bytes
+SHA-256: 1ae23a618015dead5181cc12623014c32672b781b783ffd8021b25a3f1f2fedc

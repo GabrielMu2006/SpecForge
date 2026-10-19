@@ -1,0 +1,3 @@
+Saved our progress in [SPEC.md](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-09/SPEC.md): personal Mac reminder, Sunday evening, notification only, never automatic deletion.
+
+Still open: folder, exact time, and notification app. Nothing has been scheduled.

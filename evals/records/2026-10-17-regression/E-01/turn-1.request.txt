@@ -1,0 +1,6 @@
+Independent software-assistance session. Work only in /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-01; read only its input files and relevant skill resources. Do not read evaluation criteria, other workspaces, or SpecForge repository files. Do not modify installed skills, write to external applications, or create real scheduled automations. This is a text-turn harness: ask user questions in your normal response, not via live user-input tools; actual answers may arrive as later messages. Return your actual user-facing response, with any created/changed files. Do not judge yourself against a rubric.
+
+Available skill catalog entry (not an invocation): specforge — Turn a rough software idea into an actionable SPEC.md through staged product discovery, or revise an existing spec when requirements change. Location: /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/skill/specforge/SKILL.md. Select skills normally for the user request.
+
+User request:
+我不懂开发，想做一个朋友共享课表、找共同空闲时间的网站。帮我先把需求想清楚。

@@ -1,0 +1,8 @@
+已完成，仅修改文档：
+
+- [详细界面方案](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-18/UI-PLAN.md)：暖纸色索引档案、固定原文与审核动作、窄屏布局及异常状态。
+- [启动 prompt](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-18/STARTUP-PROMPT.md)：包含文档权威、授权边界、实施顺序和验证要求。
+
+同步更新了 [SPEC](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-18/SPEC.md)、[旧方案](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-18/UI-PLAN-OLD.md) 和[验收记录](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-18/ACCEPTANCE.md)。旧深色方案已标为被替代，历史验收保留，相关任务标为待复验。
+
+2030 日期与 0.99 评分明确仅为示意，不作为真实数据或验收指标。文档链接与状态检查通过，未修改产品代码。

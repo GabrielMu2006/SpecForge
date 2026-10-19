@@ -1,0 +1,3 @@
+Fresh software-assistance session. Work only in /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-09. Use $specforge at /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/skill/specforge/SKILL.md. Read the saved SPEC.md and continue the user task. Do not read other workspaces, repository evaluations or criteria. Do not write to external apps or create real scheduled automations. Ask questions in your normal text response; no live input tool. Return your actual user-facing response and changed files.
+
+User request: Continue from our saved draft.

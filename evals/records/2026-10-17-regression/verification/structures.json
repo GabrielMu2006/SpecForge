@@ -1,0 +1,51 @@
+{
+  "E-03": {
+    "requirements": 2,
+    "tasks": 2,
+    "result": "structural pass only"
+  },
+  "E-04": {
+    "requirements": 5,
+    "tasks": 7,
+    "result": "structural pass only"
+  },
+  "E-05": {
+    "requirements": 3,
+    "tasks": 3,
+    "result": "structural pass only"
+  },
+  "E-06": {
+    "requirements": 2,
+    "tasks": 4,
+    "result": "structural pass only"
+  },
+  "E-10": {
+    "requirements": 2,
+    "tasks": 2,
+    "result": "structural pass only"
+  },
+  "E-12": {
+    "requirements": 10,
+    "tasks": 10,
+    "result": "structural pass only"
+  },
+  "E-13": {
+    "requirements": 2,
+    "tasks": 3,
+    "result": "structural pass only"
+  },
+  "E-18": {
+    "requirements": 2,
+    "tasks": 2,
+    "result": "structural pass only"
+  },
+  "E-07": {
+    "requirements": 4,
+    "tasks": 7,
+    "result": "text response structurally linted by evaluator after run"
+  },
+  "E-16-phase2": {
+    "result": "direct spec lint not run: evidence annotations in status cells are outside optional linter subset",
+    "manual_graph_review": "2 requirements, 4 tasks; T-002 -> T-003 -> T-004; no cycle"
+  }
+}

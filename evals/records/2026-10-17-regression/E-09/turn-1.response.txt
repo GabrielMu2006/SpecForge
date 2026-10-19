@@ -1,0 +1,5 @@
+You want a weekly reminder to tidy a folder. I’ll use Asia/Shanghai as the time zone unless you prefer another.
+
+1. Which folder should the reminder name?
+2. What day and time each week should it arrive?
+3. Where would you like to receive it—for example, Codex or your calendar app?

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/gabrielmu/Documents/SpecForge/scripts/package.py", line 45, in <module>
+    build()
+  File "/Users/gabrielmu/Documents/SpecForge/scripts/package.py", line 14, in build
+    metadata = check.validate()
+  File "/Users/gabrielmu/Documents/SpecForge/scripts/check.py", line 121, in validate
+    repo_links = check_links(docs, ROOT)
+  File "/Users/gabrielmu/Documents/SpecForge/scripts/check.py", line 90, in check_links
+    require(local.exists(), f"Broken local link: {path}: {target}")
+  File "/Users/gabrielmu/Documents/SpecForge/scripts/check.py", line 26, in require
+    raise ValueError(message)
+ValueError: Broken local link: /Users/gabrielmu/Documents/SpecForge/evals/records/2026-10-17-regression.md: 2026-10-17-regression/manifest.json

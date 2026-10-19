@@ -1,0 +1,8 @@
+已更新 [SPEC.md](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-15/SPEC.md)：每周日 20:00，使用 **Asia/Shanghai** 时区。
+
+当前批次剩下 **Q-003**：如果 Mac 因睡眠或关机错过提醒，怎么处理？
+
+- **A．恢复后补发一条（推荐）**：连续错过多次也只补一条，避免通知堆积。
+- **B．不补发**：等到下次固定时间再提醒。
+
+也可以直接描述你希望的处理方式。

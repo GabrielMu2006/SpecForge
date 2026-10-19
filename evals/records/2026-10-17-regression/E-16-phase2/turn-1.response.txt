@@ -1,0 +1,5 @@
+已按选定方案修改[原型 app.html](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-16-phase2/app.html)：完成展签式卡片、全文详情、返回位置与焦点恢复，以及空态和缺失说明处理。
+
+33 项 Chromium 检查通过，覆盖三组视口、长文本和键盘操作。[验证记录与截图](/var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-16-phase2/VERIFY.md)已保存，SPEC.md 与 DESIGN.md 已更新。
+
+200% 放大采用 CSS 模拟，原生缩放与屏幕阅读器未实测。

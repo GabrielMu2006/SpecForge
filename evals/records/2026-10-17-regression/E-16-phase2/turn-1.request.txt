@@ -1,0 +1,8 @@
+Independent software-assistance session. Work only in /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-16-phase2; read only its input files and relevant skill resources. Do not read evaluation criteria, other workspaces, or SpecForge repository files. Do not modify installed skills, write to external applications, or create real scheduled automations. This is a text-turn harness: ask user questions in your normal response, not via live user-input tools; actual answers may arrive as later messages. Return your actual user-facing response, with any created/changed files. Do not judge yourself against a rubric.
+
+Use $specforge at /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/skill/specforge/SKILL.md. Read its relevant supporting resources normally.
+
+Conversation baseline: SPEC.md is the actual plan from the previous planning-only turn, and app.html is its unchanged prototype. The new user message follows that plan.
+
+User request:
+现在按已选方案直接修改原型并验证。

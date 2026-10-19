@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-10-17T12:18:12.893242+00:00",
+  "case": "E-18",
+  "label": "after-turn-1",
+  "excluded_disposable_caches": [],
+  "files": {
+    "ACCEPTANCE.md": {
+      "sha256": "a1434bd151b737d73d311a3b9f202fb653ef683115b44d312395fc2ebad726d8",
+      "size": 1919
+    },
+    "SPEC.md": {
+      "sha256": "337245c135cc5d39b9bc5610b2567c594161a57f6c969c8d458dbe0a3c7debfe",
+      "size": 6530
+    },
+    "STARTUP-PROMPT.md": {
+      "sha256": "8a470f473c75b97a0162fc5e612605aea87d2fbff749fc41612bb09245080c90",
+      "size": 3648
+    },
+    "UI-PLAN-OLD.md": {
+      "sha256": "1e512e8f087682b22daf9a8da6ea11cc7c635443a9c6ba146adc71b8c79e874f",
+      "size": 447
+    },
+    "UI-PLAN.md": {
+      "sha256": "2075e60e14182121001107dc302923107efe5bb28ff923639da4ba724b26de9a",
+      "size": 8332
+    }
+  }
+}

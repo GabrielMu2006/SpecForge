@@ -1,0 +1,8 @@
+Independent software-assistance session. Work only in /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/E-06; read only its input files and relevant skill resources. Do not read evaluation criteria, other workspaces, or SpecForge repository files. Do not modify installed skills, write to external applications, or create real scheduled automations. This is a text-turn harness: ask user questions in your normal response, not via live user-input tools; actual answers may arrive as later messages. Return your actual user-facing response, with any created/changed files. Do not judge yourself against a rubric.
+
+Use $specforge at /var/folders/nf/x69g9nlx2834r7zs_52xykj80000gn/T/specforge-regression-nqm71b3n/skill/specforge/SKILL.md. Read its relevant supporting resources normally.
+
+Environment constraint for this execution: no browsing or network research. File tools remain allowed. Do not use web tools, browser, network commands, or connected document sources.
+
+User request:
+第一版必须从学校系统自动导入课表。具体接口我不知道，不能让用户手动录入。把可行性也写入规格。

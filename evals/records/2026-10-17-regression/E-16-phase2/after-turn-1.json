@@ -1,0 +1,76 @@
+{
+  "captured_at": "2026-10-17T12:18:12.869067+00:00",
+  "case": "E-16-phase2",
+  "label": "after-turn-1",
+  "excluded_disposable_caches": [],
+  "files": {
+    "DESIGN.md": {
+      "sha256": "ee193f5134f759e6eafbb717b0fe3253acac667f10a90233406ef8055f9572b2",
+      "size": 2219
+    },
+    "SPEC.md": {
+      "sha256": "bfb63df42abbc44b6ba9b59c5c911834b151f5ad09642f6cdd3a4019a8134a31",
+      "size": 9574
+    },
+    "VERIFY.md": {
+      "sha256": "48b9bb9963fcf70d160a67c735bd7999c0b6a647204874009a39702e16ba1b2d",
+      "size": 3805
+    },
+    "app.html": {
+      "sha256": "cc736257819a2866f3876c65288d4bbaa2d9f68ccfd1981909aa27c9e146e276",
+      "size": 9269
+    },
+    "output/playwright/checks.js": {
+      "sha256": "344dd03cc325e2c58d6c3512e79110555f5150d0c71e0167f3089b83b345e550",
+      "size": 9097
+    },
+    "output/playwright/detail-1440.png": {
+      "sha256": "c2b57272f16027da7ef344ef0021644889ffe8face41f224d52c92194e1a25ca",
+      "size": 538753
+    },
+    "output/playwright/detail-375.png": {
+      "sha256": "d2c3e31b42cd71b6201fe38cdc2d94ff95b286b4d981aac7ca59acc839f45a52",
+      "size": 388337
+    },
+    "output/playwright/detail-zoom-200.png": {
+      "sha256": "e505c9582854bbc256e2035c37589f82fcb1b8b01cab40f98524417a1ae6c8b4",
+      "size": 837482
+    },
+    "output/playwright/empty-1440.png": {
+      "sha256": "048438c767b376cf2bcd5440450cd4e8adfacd1a7448fc827883367f82487725",
+      "size": 43467
+    },
+    "output/playwright/empty-375.png": {
+      "sha256": "6dbd31faaa09c6a293af1dfaed4a5aa21a91c27c4fd2674d548c55c9fb01f017",
+      "size": 34158
+    },
+    "output/playwright/list-1440.png": {
+      "sha256": "353029fe4965097877186e10ebf386643d5dbf11d81608cf02fed0670c72db05",
+      "size": 50202
+    },
+    "output/playwright/list-zoom-200.png": {
+      "sha256": "c3db302f2beadeede77fc5dd83fb4a5723d1079c2d65e1d26605c7620c165c56",
+      "size": 523196
+    },
+    "output/playwright/mixed-1440.png": {
+      "sha256": "c2f12889a43236af023e285a9092244f7748d7917f3c487b3bdf140ccda84640",
+      "size": 251193
+    },
+    "output/playwright/mixed-375.png": {
+      "sha256": "9796414c7dd14aa84cf0fff71a1d6c5a3a632ce3b159dfcd638e172735128bd8",
+      "size": 240217
+    },
+    "output/playwright/mixed-768.png": {
+      "sha256": "3ad42548ddda7ad7d15995590181d60c855216d3e359c81efa784c011acc00f2",
+      "size": 180664
+    },
+    "output/playwright/results.json": {
+      "sha256": "e71596ef84ec859522c8cc073239c7aa74b35b8121367ea57e7094d877420c34",
+      "size": 14243
+    },
+    "output/playwright/results.txt": {
+      "sha256": "16e31189d2678d1799b0858befbb2168b38d5b1c02f409a51e0498b9344e666d",
+      "size": 24982
+    }
+  }
+}

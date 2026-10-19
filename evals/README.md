@@ -10,6 +10,8 @@ Advance multi-turn scenarios with the stated user messages. Save actual response
 
 Assess the decision and observable outcome, not exact wording or heading names. Count substantive questions rather than question marks. Mark a scenario failed when any required behavior is absent; use “not run” rather than inferring a pass from static analysis. External research claims need source evidence in the actual output.
 
+Record how environment constraints are enforced. A tool prohibited by the harness prompt is still technically available; label that result prompt-constrained, not a capability-removed host test. A supplied catalog entry can exercise routing behavior but does not prove native host discovery. Text-turn recovery does not test asynchronous question cards. Preserve raw artifacts before adding evaluator notes or portable replay instructions.
+
 ## Cases
 
 ### E-01 — A beginner's vague idea
@@ -145,7 +147,8 @@ Expect: updates the spec and active-document index, labels/links the superseded 
 - [0.1.0 retrospective review](records/2026-10-17-retrospective.md): selected real-use observations; not a replay or a pass for these cases.
 - 0.2.0 automated checks: maintainer tool regression tests, metadata/manifest/local Markdown links, teaching-example graphs, archive bytes/checksum and repeat-build comparison. Tool tests do not evaluate interviewing or spec readiness.
 - Forward executions, when performed, are recorded separately with actual artifacts and limits. See the [0.2.0 forward record](records/2026-10-17-forward.md).
-- Not yet established: a complete independent run of E-01 through E-18, native asynchronous-card recovery, and live multi-host compatibility.
+- [Remaining-scenario executions](records/2026-10-17-regression.md): E-01 through E-10, E-12/E-13/E-15/E-17/E-18 and E-16 phase 2 now have actual retained runs. Combined with the initial forward record, all 18 case numbers have execution evidence; this is not a complete native-host benchmark. E-06/E-07 use prompt-constrained environments; routing and text-turn recovery retain the limits described in that report.
+- Not yet established: native asynchronous-card recovery, actual tool-removed environments, native routing across hosts, and live cross-model/host compatibility.
 
 ## Original release 0.1.0 validation status
 
