@@ -4,10 +4,10 @@ import re
 
 from markdown_it import MarkdownIt
 
-STATUSES = {
+RETIRED_STATUSES = {"removed", "superseded", "已移除", "已替代"}
+STATUSES = RETIRED_STATUSES | {
     "planned", "in progress", "blocked", "complete", "needs revalidation",
-    "removed", "superseded", "计划中", "进行中", "阻塞", "已完成", "待复验",
-    "已移除", "已替代",
+    "计划中", "进行中", "阻塞", "已完成", "待复验",
 }
 NONE = {"none", "无", "无依赖", "-", "—"}
 LABELS = {
@@ -24,10 +24,13 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def plain(parser, text):
-    return "".join(token.content for root in parser.parseInline(text)
-                   for token in (root.children or [])
+def inline_text(tokens):
+    return "".join(token.content for token in tokens
                    if token.type in {"text", "code_inline", "softbreak"}).strip()
+
+
+def plain(parser, text):
+    return inline_text(token for root in parser.parseInline(text) for token in (root.children or []))
 
 
 def document(path):
@@ -88,7 +91,7 @@ def references(value, prefix, known, allow_none, context):
 
 def check_spec(path, task_path=None):
     parser, _, tokens = document(path)
-    requirements = set()
+    requirements, retired = set(), set()
     for index, token in enumerate(tokens[:-1]):
         inline = tokens[index + 1]
         if inline.type != "inline":
@@ -106,6 +109,15 @@ def check_spec(path, task_path=None):
         identifier = match.group(1)
         require(identifier not in requirements, f"Duplicate requirement ID: {identifier}")
         requirements.add(identifier)
+        if token.type == "paragraph_open":
+            # Only the leading bold title can declare retirement, even if prose follows it.
+            children = inline.children or []
+            end = next((i for i, child in enumerate(children)
+                        if child.type == "strong_close" and child.level == 0), 0)
+            title = inline_text(children[:end])
+        marker = re.search(r"(?:\([^()]*\)|（[^（）]*）)[.。]?$", title)
+        if marker and marker.group().rstrip(".。")[1:-1].strip().casefold() in RETIRED_STATUSES:
+            retired.add(identifier)
     require(requirements, f"No requirements found: {path}")
 
     tasks_file = task_path or path
@@ -118,7 +130,8 @@ def check_spec(path, task_path=None):
         for field in ("goal", "refs", "depends", "done"):
             require(fields.get(field, "").strip(), f"Missing task {field}: {identifier}")
         status = fields.get("status", "Planned")
-        require(status.casefold() in STATUSES, f"Unknown task status: {identifier}: {status}")
+        status_name = re.split(r"[;；—–]|\s+-\s+", status, maxsplit=1)[0].strip().casefold()
+        require(status_name in STATUSES, f"Unknown task status: {identifier}: {status}")
         tasks[identifier] = fields
 
     for line in lines:
@@ -154,12 +167,14 @@ def check_spec(path, task_path=None):
                     fields[label] = plain(parser, field[2])
         add(match[1], fields)
 
-    require(tasks, f"No supported tasks found: {tasks_file}")
+    active_requirements = requirements - retired
+    require(tasks or not active_requirements, f"No supported tasks found: {tasks_file}")
     covered, graph = set(), {}
     for identifier, fields in tasks.items():
         covered.update(references(fields["refs"], "R", requirements, False, identifier))
         graph[identifier] = references(fields["depends"], "T", tasks, True, identifier)
-    require(covered == requirements, f"Uncovered requirements: {sorted(requirements - covered)}")
+    uncovered = active_requirements - covered
+    require(not uncovered, f"Uncovered requirements: {sorted(uncovered)}")
     visited, visiting = set(), set()
 
     def visit(identifier):

@@ -1,0 +1,43 @@
+{
+  "argv": [
+    "codex",
+    "exec",
+    "--model",
+    "gpt-6.1-sol",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "-c",
+    "approval_policy=\"never\"",
+    "--cd",
+    "/private/tmp/specforge-mixed-eval.ZQnNcv/partial-blocker/workspace",
+    "--json",
+    "--color",
+    "never",
+    "--output-last-message",
+    "/private/tmp/specforge-mixed-eval.ZQnNcv/partial-blocker/response.txt",
+    "-"
+  ],
+  "model_requested": "gpt-6.1-sol",
+  "workspace": "/private/tmp/specforge-mixed-eval.ZQnNcv/partial-blocker/workspace",
+  "initial_files_sha256": {
+    "clean.py": "04483db57c256662dfc0d6ecd0e8beab969d39d36bbc231393849111563efbb7",
+    "counts.py": "c913db4d167ec31216ef821d63955043dfe8dc76ad4712e22084343d09c0a262",
+    "export.py": "ff64d831915e3b80af2d32f98ee56e50b258b6ad719f22e008bf95d66c431d31"
+  },
+  "runtime_sha256": {
+    "LICENSE": "42d98b0ff1e06721df475f5695e040279f7b33fcc89499bfce313cc57e9e0e84",
+    "SKILL.md": "bfa3696f4ca0d2f6f0d768072a8a247cd5e4fa33d574d23019bee220663d37d7",
+    "agents/openai.yaml": "b8bac29bfa2985154591d5675a817e4b569e8cff63b2868b52f137360c729eb9",
+    "assets/SPEC.template.md": "35f068b83d7317cf8a65c5c0f14d107e0694ed1a0d16fce6c126c016ec592bd3",
+    "references/interview.md": "c0cd8275937395bba587ab162918c8ad743fa88b37a18956e0d3d103ee92db46",
+    "references/revisions.md": "a76cac8238915511af6ad6bd860bf7a61ff4c5a21b67b4284e9dee86f5389344",
+    "references/specification.md": "75beb9a78eab58594e448590aba999ed576c8d3783b894843ba3e6359b2cf9a9"
+  },
+  "repository_HEAD": "e16259328b7574ca7ac6aa2c3f25e2bb22b766fd",
+  "cli_version": "codex-cli 0.159.2",
+  "sample_sleep_seconds": 0.005
+}

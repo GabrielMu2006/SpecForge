@@ -83,7 +83,7 @@ Claude Code 用户将最后两行中的 `.agents` 换成 `.claude`。目标已�
 如果已准备好，请基于现有代码库提出实现方案，再按任务依赖推进。
 ```
 
-这条开发指令由用户另外发出；SpecForge 本身负责定义产品。
+用户可以另发开发指令，也可以在同一请求里同时要求规格和实现。同一请求包含两项工作时，先交付规格，再推进用户明确要求且没有阻塞的实现工作。
 
 ## 交付示例
 
@@ -117,7 +117,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/package.py
 ```
 
-检查覆盖元数据、发布文件清单、Markdown 本地链接、示例任务图和发布包内容。可选 `scripts/check.py --spec 路径 --tasks 任务文件路径` 只做结构检查，格式与限制见[维护工具说明](scripts/README.md)。维护工具的 Python 与解析库不会进入 skill 发布包。
+检查覆盖元数据、发布文件清单、Markdown 本地链接、示例任务图和发布包内容。Codex 元数据必须显式启用自动发现。可选 `scripts/check.py --spec 路径 --tasks 任务文件路径` 只做结构检查，支持显式退役需求和规范任务状态后的证据说明。维护工具的 Python 与解析库不会进入 skill 发布包。[维护工具的格式与限制](scripts/README.md)
 
 行为质量需要按 [18 个回归场景](evals/README.md)进行真实对话评测；已有真实使用复盘与新版本前向运行分开记录，静态检查通过不代表访谈效果已被验证。贡献前请阅读 [贡献说明](CONTRIBUTING.md)。
 

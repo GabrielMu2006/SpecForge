@@ -1,0 +1,53 @@
+{
+  "no-blocker": {
+    "initial_and_final_spec_status": "Ready for implementation",
+    "initial_and_final_spec_lint_counts": {
+      "requirements": 2,
+      "tasks": 2
+    },
+    "first_complete_SPEC_snapshot": "02-SPEC.md",
+    "first_source_write_snapshot": "03-clean.py",
+    "spec_and_source_completed_tool_items": [
+      "item_4",
+      "item_5"
+    ],
+    "elapsed_between_observations_ms": 115.19,
+    "elapsed_between_file_mtimes_ms": 119.533,
+    "added": [
+      "SPEC.md"
+    ],
+    "modified": [
+      "clean.py"
+    ],
+    "unchanged_sha256": {
+      "counts.py": "c913db4d167ec31216ef821d63955043dfe8dc76ad4712e22084343d09c0a262"
+    },
+    "independent_cleaning_assertion_cases_passed": 6
+  },
+  "partial-blocker": {
+    "initial_and_final_spec_status": "Draft",
+    "initial_and_final_spec_lint_counts": {
+      "requirements": 3,
+      "tasks": 5
+    },
+    "first_complete_SPEC_snapshot": "01-SPEC.md",
+    "first_source_write_snapshot": "02-clean.py",
+    "spec_and_source_completed_tool_items": [
+      "item_6",
+      "item_7"
+    ],
+    "elapsed_between_observations_ms": 10713.677,
+    "elapsed_between_file_mtimes_ms": 10709.716,
+    "added": [
+      "SPEC.md"
+    ],
+    "modified": [
+      "clean.py"
+    ],
+    "unchanged_sha256": {
+      "counts.py": "c913db4d167ec31216ef821d63955043dfe8dc76ad4712e22084343d09c0a262",
+      "export.py": "ff64d831915e3b80af2d32f98ee56e50b258b6ad719f22e008bf95d66c431d31"
+    },
+    "independent_cleaning_assertion_cases_passed": 6
+  }
+}

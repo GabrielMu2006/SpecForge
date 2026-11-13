@@ -1,0 +1,10 @@
+{
+  "cli_exit_code": 0,
+  "elapsed_seconds": 97.07,
+  "final_files_sha256": {
+    "SPEC.md": "9030594cc4dadb837db3276adf29f284a9374c2b189b1357ed4ab7f8edd92a0c",
+    "clean.py": "95b403c8111b3b4fcf5b896ffe534fe7b8f14c8be639e52256f1bee27f171228",
+    "counts.py": "c913db4d167ec31216ef821d63955043dfe8dc76ad4712e22084343d09c0a262",
+    "export.py": "ff64d831915e3b80af2d32f98ee56e50b258b6ad719f22e008bf95d66c431d31"
+  }
+}

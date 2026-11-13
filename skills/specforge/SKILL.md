@@ -17,6 +17,7 @@ Help a nontechnical person define a software product well enough for a coding ag
 - If several projects or specs could be the target, ask which one; do not merge unrelated scopes. Do not read unrelated personal files.
 - Planning is this skill's deliverable. Do not start implementation, create remote issues, install dependencies, or publish the user's project merely because a task list exists. An explicit request for those actions is separate authorization; this skill does not cancel it.
 - Carry the current assignment forward: discovery, specification revision, or an executable plan. Feedback on a prototype does not expand a planning-only assignment into code changes. A later explicit implementation request changes that assignment without requiring another approval.
+- When one request asks for both a specification and implementation, deliver the specification first, then implement only the explicitly requested work that can proceed without unresolved blockers.
 - Do not force discovery onto a sufficiently specified coding request, a small bug fix, or a simple document edit. If explicitly invoked for a narrow change, keep the work narrow.
 
 ## Conversation contract

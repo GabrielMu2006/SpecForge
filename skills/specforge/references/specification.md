@@ -50,7 +50,7 @@ Prefer end-to-end outcomes to premature file/function instructions. Dependencies
 
 Task status defaults to Planned. An implementation request, generated code, or completed spec does not itself prove a task is done. Preserve existing completion evidence when revising a backlog; flag changed acceptance for revalidation instead of silently declaring it still complete.
 
-Use explicit dependency IDs rather than abbreviated ranges in new task tables. IDs remain stable when prerequisites are added later; graph order is determined by dependencies, not numeric ID order. For the optional repository maintainer linter, canonical statuses are Planned, In progress, Blocked, Complete, Needs revalidation, Removed, or Superseded (and the documented Chinese equivalents). Other host formats remain usable; structural lint cannot establish prose quality or lifecycle correctness.
+Use explicit dependency IDs rather than abbreviated ranges in new task tables. IDs remain stable when prerequisites are added later; graph order is determined by dependencies, not numeric ID order. For the optional repository maintainer linter, canonical statuses are Planned, In progress, Blocked, Complete, Needs revalidation, Removed, or Superseded (and the documented Chinese equivalents). Put evidence notes after a semicolon or dash, as in `Complete; see VERIFY.md`. Other host formats remain usable; structural lint cannot establish prose quality or lifecycle correctness.
 
 ## Uncertainty and provenance
 

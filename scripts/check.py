@@ -111,9 +111,9 @@ def validate():
     prompt = interface.get("default_prompt")
     require(isinstance(prompt, str) and "$specforge" in prompt,
             "UI prompt must name the skill")
-    policy = ui.get("policy", {})
-    require(isinstance(policy, dict) and policy.get("allow_implicit_invocation", True) is True,
-            "Automatic discovery should remain enabled")
+    policy = ui.get("policy")
+    require(isinstance(policy, dict) and policy.get("allow_implicit_invocation") is True,
+            "UI policy must explicitly set allow_implicit_invocation to true")
     runtime_links = check_links(SKILL.rglob("*.md"), SKILL)
     docs = list(ROOT.glob("*.md"))
     for directory in ("examples", "evals"):

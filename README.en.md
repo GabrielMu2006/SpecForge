@@ -68,7 +68,7 @@ Use specforge to read SPEC.md. I want V1 to support friends at different
 schools. Work out which rules and tasks need to change.
 ```
 
-You can request a recommendation, save a draft, or pause at any point. The workflow uses your language. The skill defines the product; you separately instruct a coding agent to implement it.
+You can request a recommendation, save a draft, or pause at any point. The workflow uses your language. You can request implementation in a later turn or in the same request as the spec. When you request both together, the agent delivers the spec first and proceeds with the implementation work you explicitly requested that has no unresolved blockers.
 
 ## Examples and maintenance
 
@@ -86,7 +86,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/package.py
 ```
 
-Checks validate metadata, an explicit release manifest, Markdown local file links, sample graphs, and archive contents. Optional `scripts/check.py --spec PATH --tasks TASK_FILE` performs structural lint only; see [supported formats and limits](scripts/README.md). Python and parser libraries remain maintainer dependencies outside the runtime bundle.
+Checks validate metadata, an explicit release manifest, Markdown local file links, sample graphs, and archive contents. The Codex metadata must explicitly enable automatic discovery. Optional `scripts/check.py --spec PATH --tasks TASK_FILE` performs structural lint only, with support for explicitly retired requirements and evidence notes after canonical task statuses. Python and parser libraries remain maintainer dependencies outside the runtime bundle. [Supported formats and limits](scripts/README.md)
 
 These checks do not establish interview quality. The [18 behavioral scenarios](evals/README.md) separate historical observations from new forward executions; native multi-host behavior remains separately evaluated. Read [contribution guidance](CONTRIBUTING.md) before proposing changes.
 

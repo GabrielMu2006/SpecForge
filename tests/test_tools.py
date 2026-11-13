@@ -58,6 +58,34 @@ class SpecTests(unittest.TestCase):
         text = text.replace(" | Planned |", " |")
         self.assertEqual(self.lint(text), (2, 2))
 
+    def test_retired_requirements_keep_their_ids_without_needing_coverage(self):
+        for title in (
+            "### R-002 — Review (Removed)",
+            "### R-002 — Review（已替代）",
+            "**R-002 — Review (Superseded).** Kept for historical references.",
+            "__R-002 — Review（已移除）__",
+        ):
+            with self.subTest(title=title):
+                text = SPEC.replace("### R-002 — Review", title)
+                self.assertEqual(self.lint(text.replace("| R-002 |", "| R-001 |")), (2, 2))
+                self.assertEqual(self.lint(text.replace("needs confirmation | Planned",
+                                                        "needs confirmation | Removed")), (2, 2))
+
+    def test_only_an_explicit_retirement_marker_exempts_coverage(self):
+        for title in (
+            "### R-002 — Review (V2)",
+            "### R-002 — Review (Not Removed)",
+            "### R-002 — Review（尚未移除）",
+            "### R-002 — Review (Removed) behavior",
+            "**R-002 — Review** The old review step is gone (Removed)",
+        ):
+            with self.subTest(title=title):
+                text = SPEC.replace("### R-002 — Review", title).replace("| R-002 |", "| R-001 |")
+                self.reject(text, "Uncovered requirements: .*R-002")
+
+    def test_only_retired_requirements_can_have_zero_tasks(self):
+        self.assertEqual(self.lint("### R-001 — Import (Removed)\n"), (1, 0))
+
     def test_task_blocks_with_explicit_goal(self):
         text = """### R-001 — Import
 
@@ -67,6 +95,18 @@ class SpecTests(unittest.TestCase):
 - Depends on: None
 - Done when: The original stays unchanged.
 - Status: Needs revalidation
+"""
+        self.assertEqual(self.lint(text), (1, 1))
+
+    def test_chinese_task_block_with_status_note(self):
+        text = """### R-001 — 导入
+
+### T-001
+- 目标：保留可编辑的副本。
+- 覆盖需求：R-001
+- 依赖：无
+- 完成条件：原文件不变。
+- 状态：已完成；见 VERIFY.md
 """
         self.assertEqual(self.lint(text), (1, 1))
 
@@ -104,10 +144,19 @@ class SpecTests(unittest.TestCase):
             with self.subTest(field=field):
                 self.reject(SPEC.replace(old, new), "Missing task " + field)
 
-    def test_explicit_blank_or_unknown_status_is_rejected(self):
-        for status in ("", "Banana"):
+    def test_canonical_status_can_include_an_evidence_note(self):
+        for status in (
+            "Complete; see VERIFY.md", "Complete — see VERIFY.md",
+            "in progress – see VERIFY.md", "Needs revalidation - see VERIFY.md",
+        ):
             with self.subTest(status=status):
-                self.reject(SPEC.replace("| Planned |", "| " + status + " |", 1), "Unknown task status")
+                self.assertEqual(self.lint(SPEC.replace("| Planned |", f"| {status} |", 1)), (2, 2))
+
+    def test_explicit_blank_or_unknown_status_is_rejected(self):
+        for status in ("", "Banana", "; see VERIFY.md", "Banana — Complete",
+                       "Complete within documented checks — see VERIFY.md", "Complete-ish"):
+            with self.subTest(status=status):
+                self.reject(SPEC.replace("| Planned |", f"| {status} |", 1), "Unknown task status")
 
     def test_chinese_status_and_dependency(self):
         self.assertEqual(self.lint(SPEC.replace("None", "无").replace("Planned", "计划中")), (2, 2))
@@ -301,6 +350,17 @@ class BundleTests(unittest.TestCase):
             with self.subTest(content=content):
                 path.write_text(content)
                 with self.assertRaisesRegex(ValueError, "interface mapping"):
+                    self.build()
+
+    def test_automatic_discovery_policy_must_explicitly_enable_it(self):
+        path = self.skill / "agents/openai.yaml"
+        interface = path.read_text().split("\npolicy:", 1)[0]
+        for policy in ("", "policy: {}", "policy: []", "policy:\n  allow_implicit_invocation: false",
+                       'policy:\n  allow_implicit_invocation: "true"',
+                       "policy:\n  allow_implicit_invocation: 1"):
+            with self.subTest(policy=policy):
+                path.write_text(f"{interface.rstrip()}\n\n{policy}\n")
+                with self.assertRaisesRegex(ValueError, "explicitly set allow_implicit_invocation to true"):
                     self.build()
 
 
