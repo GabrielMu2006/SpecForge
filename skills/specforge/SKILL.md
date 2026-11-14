@@ -3,7 +3,7 @@ name: specforge
 description: "Turn a rough software idea into an actionable SPEC.md through staged product discovery, or revise an existing spec when requirements change. Use for clarifying users, V1 scope, flows, business rules, acceptance criteria, roadmap, and implementation tasks before coding."
 license: MIT
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # SpecForge
